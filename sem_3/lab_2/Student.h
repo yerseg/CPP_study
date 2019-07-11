@@ -58,7 +58,7 @@ public:
 			return (day != birth.day || month != birth.month || year != birth.year);
 		}
 		friend ostream& operator << (ostream &s, Birthday &birth) {
-			s << "Äàòà ğîæäåíèÿ: " << birth.day << '/' << birth.month << '/' << birth.year;
+			s << "Ğ”Ğ°Ñ‚Ğ° Ñ€Ğ¾Ğ¶Ğ´ĞµĞ½Ğ¸Ñ: " << birth.day << '/' << birth.month << '/' << birth.year;
 			return s;
 		}
 	} birthday;
@@ -128,7 +128,7 @@ public:
 		else return (birthday != student.birthday);
 	}
 	friend ostream& operator << (ostream &s, Student &st) {
-		s << "Ñòóäåíò " << st.name << " " << st.birthday;
+		s << "Ğ¡Ñ‚ÑƒĞ´ĞµĞ½Ñ‚ " << st.name << " " << st.birthday;
 		return s;
 	}
 

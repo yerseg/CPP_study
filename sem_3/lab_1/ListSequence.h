@@ -248,10 +248,10 @@ void ListSequence<T>::printAll() {
 		Node<T> *ptr = this->first;
 		int i;
 		for (i = 0; ptr != this->last; i++) {
-			cout << "Ýëåìåíò " << i << " : " << ptr->data << endl;
+			cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ " << i << " : " << ptr->data << endl;
 			ptr = ptr->next;
 		}
-		cout << "Ýëåìåíò " << i << " : " << this->last->data << endl << endl;
+		cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ " << i << " : " << this->last->data << endl << endl;
 	}
 }
 

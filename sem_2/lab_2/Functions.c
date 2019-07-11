@@ -5,7 +5,7 @@
 #define TRUE 1
 #define FALSE 0
 
-//Хранимые функции
+//РҐСЂР°РЅРёРјС‹Рµ С„СѓРЅРєС†РёРё
 int func1(int n) {
 	return n * n;
 }
@@ -33,7 +33,7 @@ int func5(int n) {
 		return FALSE;
 }
 
-//Функции для очереди
+//Р¤СѓРЅРєС†РёРё РґР»СЏ РѕС‡РµСЂРµРґРё
 
 List* list_alloc() {
 	return (List*)malloc(sizeof(List));
@@ -82,7 +82,7 @@ void* string_set() {
 	str->string_size = 1;
 	char c;
 	str->string_ptr = (char*)malloc(sizeof(char));
-	printf("Введите строку:\n");
+	printf("Р’РІРµРґРёС‚Рµ СЃС‚СЂРѕРєСѓ:\n");
 	while ((c = getchar()) != '\n') {
 		str->string_ptr = (char*)realloc(str->string_ptr, (str->string_size + 1) * sizeof(char));
 		str->string_ptr[str->string_size - 1] = c;
@@ -94,12 +94,12 @@ void* string_set() {
 
 void* function_set() {
 	int n;
-	printf("Укажите номер функции, которую хотите отправить в очередь(1-5)->");
+	printf("РЈРєР°Р¶РёС‚Рµ РЅРѕРјРµСЂ С„СѓРЅРєС†РёРё, РєРѕС‚РѕСЂСѓСЋ С…РѕС‚РёС‚Рµ РѕС‚РїСЂР°РІРёС‚СЊ РІ РѕС‡РµСЂРµРґСЊ(1-5)->");
 	do {
 		scanf_s("%i", &n);
 		rewind(stdin);
 		if (n > 5 || n < 1)
-			printf("ОШИБКА: повторите ввод->");
+			printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 	} while (n > 5 || n < 1);
 	if (n == 1)
 		return func1;
@@ -130,12 +130,12 @@ void out_string(void* ptr) {
 
 void string_list_set(Queue* string_queue) {
 	int p, i = 0;
-	printf("Укажите какое количество СТРОК добавим в очередь изначально->");
+	printf("РЈРєР°Р¶РёС‚Рµ РєР°РєРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РЎРўР РћРљ РґРѕР±Р°РІРёРј РІ РѕС‡РµСЂРµРґСЊ РёР·РЅР°С‡Р°Р»СЊРЅРѕ->");
 	do {
 		scanf_s("%d", &p);
 		rewind(stdin);
 		if (p <= 0)
-			printf("ОШИБКА: повторите ввод->");
+			printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 	} while (p <= 0);
 
 	rewind(stdin);
@@ -146,12 +146,12 @@ void string_list_set(Queue* string_queue) {
 	}
 
 	do {
-		printf("Будем ли ещё добавлять строки в очередь? (1 - да, 0 - нет) ->");
+		printf("Р‘СѓРґРµРј Р»Рё РµС‰С‘ РґРѕР±Р°РІР»СЏС‚СЊ СЃС‚СЂРѕРєРё РІ РѕС‡РµСЂРµРґСЊ? (1 - РґР°, 0 - РЅРµС‚) ->");
 		do {
 			scanf_s("%d", &p);
 			rewind(stdin);
 			if (p != 0 && p != 1)
-				printf("ОШИБКА: повторите ввод->");
+				printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 		} while (p != 0 && p != 1);
 
 		if (p == 1) {
@@ -163,12 +163,12 @@ void string_list_set(Queue* string_queue) {
 
 void out_list_string(Queue* string_queue) {
 	int p, c, maxP, j = 0;
-	printf("Введите количество СТРОК, которые будут выведены немедленно(max = %d)", string_queue->size);
+	printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РЎРўР РћРљ, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РІС‹РІРµРґРµРЅС‹ РЅРµРјРµРґР»РµРЅРЅРѕ(max = %d)", string_queue->size);
 	do {
 		scanf_s("%d", &p);
 		rewind(stdin);
 		if (p > string_queue->size || p<0)
-			printf("ОШИБКА: повторите ввод->");
+			printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 	} while (p > string_queue->size || p<0);
 	maxP = string_queue->size;
 	for (int i = 0; i < p; i++) {
@@ -181,7 +181,7 @@ void out_list_string(Queue* string_queue) {
 
 	if (p != maxP) {
 		do {
-			printf("Будем ли ещё брать элементы из очереди: 1 - yes, 0 - no ->");
+			printf("Р‘СѓРґРµРј Р»Рё РµС‰С‘ Р±СЂР°С‚СЊ СЌР»РµРјРµРЅС‚С‹ РёР· РѕС‡РµСЂРµРґРё: 1 - yes, 0 - no ->");
 			do {
 				scanf_s("%i", &c);
 				rewind(stdin);
@@ -194,7 +194,7 @@ void out_list_string(Queue* string_queue) {
 				free(q);
 			}
 			else
-				printf("ОШИБКА\n");
+				printf("РћРЁРР‘РљРђ\n");
 		} while (c != 0 && string_queue->size != 0);
 	}
 	for (int i = 0; i < string_queue->size; i++) {
@@ -207,12 +207,12 @@ void out_list_string(Queue* string_queue) {
 
 void func_list_set(Queue* func_queue) {
 	int p, i = 0;
-	printf("Укажите какое количество ФУНКЦИЙ добавим в очередь изначально->");
+	printf("РЈРєР°Р¶РёС‚Рµ РєР°РєРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р¤РЈРќРљР¦РР™ РґРѕР±Р°РІРёРј РІ РѕС‡РµСЂРµРґСЊ РёР·РЅР°С‡Р°Р»СЊРЅРѕ->");
 	do {
 		scanf_s("%d", &p);
 		rewind(stdin);
 		if (p <= 0)
-			printf("ОШИБКА: повторите ввод->");
+			printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 	} while (p <= 0);
 
 	while (i < p) {
@@ -222,12 +222,12 @@ void func_list_set(Queue* func_queue) {
 	}
 
 	do {
-		printf("Будем ли ещё добавлять функции в очередь? (1 - да, 0 - нет) ->");
+		printf("Р‘СѓРґРµРј Р»Рё РµС‰С‘ РґРѕР±Р°РІР»СЏС‚СЊ С„СѓРЅРєС†РёРё РІ РѕС‡РµСЂРµРґСЊ? (1 - РґР°, 0 - РЅРµС‚) ->");
 		do {
 			scanf_s("%d", &p);
 			rewind(stdin);
 			if (p != 0 && p != 1)
-				printf("ОШИБКА: повторите ввод->");
+				printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 		} while (p != 0 && p != 1);
 		if (p == 1) {
 			void* func = function_set();
@@ -238,17 +238,17 @@ void func_list_set(Queue* func_queue) {
 
 void out_list_func(Queue* func_queue) {
 	int p, x, c, maxP, j = 0;
-	printf("Введите количество ФУНКЦИЙ, которые будут выведены немедленно(max = %d)", func_queue->size);
+	printf("Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р¤РЈРќРљР¦РР™, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РІС‹РІРµРґРµРЅС‹ РЅРµРјРµРґР»РµРЅРЅРѕ(max = %d)", func_queue->size);
 	do {
 		scanf_s("%d", &p);
 		rewind(stdin);
 		if (p > func_queue->size || p<0)
-			printf("ОШИБКА: повторите ввод->");
+			printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 	} while (p > func_queue->size || p<0);
 	maxP = func_queue->size;
 	for (int i = 0; i < p; i++) {
 		void* func = pop(func_queue);
-		printf("Введите значение для функции->");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ С„СѓРЅРєС†РёРё->");
 		scanf_s("%d", &x);
 		rewind(stdin);
 		int res = out_function(func, x);
@@ -257,14 +257,14 @@ void out_list_func(Queue* func_queue) {
 
 	if (p != maxP) {
 		do {
-			printf("Будем ли ещё брать элементы из очереди: 1 - yes, 0 - no ->");
+			printf("Р‘СѓРґРµРј Р»Рё РµС‰С‘ Р±СЂР°С‚СЊ СЌР»РµРјРµРЅС‚С‹ РёР· РѕС‡РµСЂРµРґРё: 1 - yes, 0 - no ->");
 			do {
 				scanf_s("%i", &c);
 				rewind(stdin);
 			} while (c != 1 && c != 0);
 			if (c == 1 && func_queue->size != 0) {
 				void* func = pop(func_queue);
-				printf("Введите значение для функции->");
+				printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ С„СѓРЅРєС†РёРё->");
 				scanf_s("%d", &x);
 				rewind(stdin);
 				int res = out_function(func, x);
@@ -272,7 +272,7 @@ void out_list_func(Queue* func_queue) {
 				free(func);
 			}
 			else
-				printf("ОШИБКА\n");
+				printf("РћРЁРР‘РљРђ\n");
 		} while (c != 0 && func_queue->size != 0);
 	}
 	for (int i = 0; i < func_queue->size; i++) {
@@ -283,12 +283,12 @@ void out_list_func(Queue* func_queue) {
 
 void out_concate_func(Queue* queue, int func_count, int string_count) {
 	int p, x, c, i, j, maxP = 0;
-	printf("\nВведите количество СТРОК, которые будут выведены немедленно(max = %d)", string_count);
+	printf("\nР’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РЎРўР РћРљ, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РІС‹РІРµРґРµРЅС‹ РЅРµРјРµРґР»РµРЅРЅРѕ(max = %d)", string_count);
 	do {
 		scanf_s("%d", &p);
 		rewind(stdin);
 		if (p > string_count || p<0)
-			printf("ОШИБКА: повторите ввод->");
+			printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 	} while (p > string_count || p<0);
 	maxP = string_count;
 	for (int i = 0; i < p; i++) {
@@ -299,7 +299,7 @@ void out_concate_func(Queue* queue, int func_count, int string_count) {
 
 	if (p != maxP) {
 		do {
-			printf("Будем ли ещё брать элементы из очереди: 1 - yes, 0 - no ->");
+			printf("Р‘СѓРґРµРј Р»Рё РµС‰С‘ Р±СЂР°С‚СЊ СЌР»РµРјРµРЅС‚С‹ РёР· РѕС‡РµСЂРµРґРё: 1 - yes, 0 - no ->");
 			do {
 				scanf_s("%i", &c);
 				rewind(stdin);
@@ -310,7 +310,7 @@ void out_concate_func(Queue* queue, int func_count, int string_count) {
 				out_string(str);
 			}
 			else
-				printf("ОШИБКА\n");
+				printf("РћРЁРР‘РљРђ\n");
 		} while (c != 0 && string_count != 0);
 	}
 	for (int i = 0; i < string_count; i++) {
@@ -320,18 +320,18 @@ void out_concate_func(Queue* queue, int func_count, int string_count) {
 		free(s);
 	}
 
-	printf("\nВведите количество ФУНКЦИЙ, которые будут выведены немедленно(max = %d)", func_count);
+	printf("\nР’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р¤РЈРќРљР¦РР™, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РІС‹РІРµРґРµРЅС‹ РЅРµРјРµРґР»РµРЅРЅРѕ(max = %d)", func_count);
 	do {
 		scanf_s("%d", &p);
 		rewind(stdin);
 		if (p > func_count || p<0)
-			printf("ОШИБКА: повторите ввод->");
+			printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 	} while (p > func_count || p<0);
 	maxP = func_count;
 	for (i = 0; i < p; i++) {
 		void* func = pop(queue);
 		func_count--;
-		printf("Введите значение для функции->");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ С„СѓРЅРєС†РёРё->");
 		scanf_s("%d", &x);
 		rewind(stdin);
 		int res = out_function(func, x);
@@ -340,7 +340,7 @@ void out_concate_func(Queue* queue, int func_count, int string_count) {
 
 	if (p != maxP) {
 		do {
-			printf("Будем ли ещё брать элементы из очереди: 1 - yes, 0 - no ->");
+			printf("Р‘СѓРґРµРј Р»Рё РµС‰С‘ Р±СЂР°С‚СЊ СЌР»РµРјРµРЅС‚С‹ РёР· РѕС‡РµСЂРµРґРё: 1 - yes, 0 - no ->");
 			do {
 				scanf_s("%i", &c);
 				rewind(stdin);
@@ -348,14 +348,14 @@ void out_concate_func(Queue* queue, int func_count, int string_count) {
 			if (c == 1 && func_count != 0) {
 				void* func = pop(queue);
 				func_count--;
-				printf("Введите значение для функции->");
+				printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ С„СѓРЅРєС†РёРё->");
 				scanf_s("%d", &x);
 				rewind(stdin);
 				int res = out_function(func, x);
 				printf("\nFunction(X) == %d\n", res);
 			}
 			else
-				printf("ОШИБКА\n");
+				printf("РћРЁРР‘РљРђ\n");
 		} while (c != 0 && func_count != 0);
 	}
 }
@@ -363,18 +363,18 @@ void out_concate_func(Queue* queue, int func_count, int string_count) {
 void out_concate_string(Queue* queue, int string_count, int func_count) {
 	int p, x, c, i, maxP, j = 0;
 
-	printf("\nВведите количество ФУНКЦИЙ, которые будут выведены немедленно(max = %d)", func_count);
+	printf("\nР’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р¤РЈРќРљР¦РР™, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РІС‹РІРµРґРµРЅС‹ РЅРµРјРµРґР»РµРЅРЅРѕ(max = %d)", func_count);
 	do {
 		scanf_s("%d", &p);
 		rewind(stdin);
 		if (p > func_count || p<0)
-			printf("ОШИБКА: повторите ввод->");
+			printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 	} while (p > func_count || p<0);
 	maxP = func_count;
 	for (i = 0; i < p; i++) {
 		void* func = pop(queue);
 		func_count--;
-		printf("Введите значение для функции->");
+		printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ С„СѓРЅРєС†РёРё->");
 		scanf_s("%d", &x);
 		rewind(stdin);
 		int res = out_function(func, x);
@@ -383,7 +383,7 @@ void out_concate_string(Queue* queue, int string_count, int func_count) {
 
 	if (p != maxP) {
 		do {
-			printf("Будем ли ещё брать элементы из очереди: 1 - yes, 0 - no ->");
+			printf("Р‘СѓРґРµРј Р»Рё РµС‰С‘ Р±СЂР°С‚СЊ СЌР»РµРјРµРЅС‚С‹ РёР· РѕС‡РµСЂРµРґРё: 1 - yes, 0 - no ->");
 			do {
 				scanf_s("%i", &c);
 				rewind(stdin);
@@ -391,14 +391,14 @@ void out_concate_string(Queue* queue, int string_count, int func_count) {
 			if (c == 1 && func_count != 0) {
 				void* func = pop(queue);
 				func_count--;
-				printf("Введите значение для функции->");
+				printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ С„СѓРЅРєС†РёРё->");
 				scanf_s("%d", &x);
 				rewind(stdin);
 				int res = out_function(func, x);
 				printf("\nFunction(X) == %d\n", res);
 			}
 			else
-				printf("ОШИБКА\n");
+				printf("РћРЁРР‘РљРђ\n");
 		} while (c != 0 && func_count != 0);
 	}
 	for (int i = 0; i < func_count; i++) {
@@ -406,12 +406,12 @@ void out_concate_string(Queue* queue, int string_count, int func_count) {
 		free(str);
 	}
 
-	printf("\nВведите количество СТРОК, которые будут выведены немедленно(max = %d)", string_count);
+	printf("\nР’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РЎРўР РћРљ, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РІС‹РІРµРґРµРЅС‹ РЅРµРјРµРґР»РµРЅРЅРѕ(max = %d)", string_count);
 	do {
 		scanf_s("%d", &p);
 		rewind(stdin);
 		if (p > string_count || p<0)
-			printf("ОШИБКА: повторите ввод->");
+			printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 	} while (p > string_count || p<0);
 	maxP = string_count;
 	for (int i = 0; i < p; i++) {
@@ -422,7 +422,7 @@ void out_concate_string(Queue* queue, int string_count, int func_count) {
 
 	if (p != maxP) {
 		do {
-			printf("Будем ли ещё брать элементы из очереди: 1 - yes, 0 - no ->");
+			printf("Р‘СѓРґРµРј Р»Рё РµС‰С‘ Р±СЂР°С‚СЊ СЌР»РµРјРµРЅС‚С‹ РёР· РѕС‡РµСЂРµРґРё: 1 - yes, 0 - no ->");
 			do {
 				scanf_s("%i", &c);
 				rewind(stdin);
@@ -433,7 +433,7 @@ void out_concate_string(Queue* queue, int string_count, int func_count) {
 				out_string(str);
 			}
 			else
-				printf("ОШИБКА\n");
+				printf("РћРЁРР‘РљРђ\n");
 		} while (c != 0 && string_count != 0);
 	}
 	for (int i = 0; i < string_count; i++) {
@@ -449,17 +449,17 @@ void GoInterface(int type, int function) {
 	if (type == 1) {
 		Queue *func_queue = queue_alloc();
 		func_queue = init_queue(func_queue);
-		printf("\nФУНКЦИИ\n\n");
+		printf("\nР¤РЈРќРљР¦РР\n\n");
 		func_list_set(func_queue);
 
 		if (function == 1) {
 			Queue* new_queue;
 			Queue *string_queue2 = queue_alloc();
 			string_queue2 = init_queue(string_queue2);
-			printf("\nСТРОКИ\n\n");
+			printf("\nРЎРўР РћРљР\n\n");
 			string_list_set(string_queue2);
 			new_queue = concat(func_queue, string_queue2);
-			printf("\nКОНКАТЕНАЦИЯ проведена\nКОНКАТЕНИРОВАННАЯ ОЧЕРЕДЬ:\n");
+			printf("\nРљРћРќРљРђРўР•РќРђР¦РРЇ РїСЂРѕРІРµРґРµРЅР°\nРљРћРќРљРђРўР•РќРР РћР’РђРќРќРђРЇ РћР§Р•Р Р•Р”Р¬:\n");
 			out_concate_func(new_queue, func_queue->size, string_queue2->size);
 			free(func_queue);
 			free(string_queue2);
@@ -468,16 +468,16 @@ void GoInterface(int type, int function) {
 		if (function == 2) {
 			Queue* new_func_queue;
 			int p, *arr;
-			printf("Введите какое количество элементов будем извлекать (max = %d)-->", func_queue->size);
+			printf("Р’РІРµРґРёС‚Рµ РєР°РєРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ Р±СѓРґРµРј РёР·РІР»РµРєР°С‚СЊ (max = %d)-->", func_queue->size);
 			do {
 				scanf_s("%d", &p);
 				rewind(stdin);
 				if (p > func_queue->size || p<0)
-					printf("ОШИБКА: повторите ввод->");
+					printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 			} while (p > func_queue->size || p<0);
 			arr = index_for_extract(func_queue, p);
 			new_func_queue = extract_subsequence(func_queue, arr, p);
-			printf("\nИЗВЛЕЧЕНИЕ проведено:\n");
+			printf("\nРР—Р’Р›Р•Р§Р•РќРР• РїСЂРѕРІРµРґРµРЅРѕ:\n");
 			out_list_func(new_func_queue);
 			free(new_func_queue);
 			free(func_queue);
@@ -487,13 +487,13 @@ void GoInterface(int type, int function) {
 			int* index;
 			sub_func_queue = queue_alloc();
 			sub_func_queue = init_queue(sub_func_queue);
-			printf("Введите ПОДПОСЛЕДОВАТЕЛЬНОСТЬ ФУНКЦИЙ\n");
+			printf("Р’РІРµРґРёС‚Рµ РџРћР”РџРћРЎР›Р•Р”РћР’РђРўР•Р›Р¬РќРћРЎРўР¬ Р¤РЈРќРљР¦РР™\n");
 			func_list_set(sub_func_queue);
 			index = search_subsequence(func_queue, sub_func_queue, compare_func);
 			int size = func_queue->size;
-			printf("\nИСХОДНАЯ ОЧЕРЕДЬ:\n");
+			printf("\nРРЎРҐРћР”РќРђРЇ РћР§Р•Р Р•Р”Р¬:\n");
 			out_list_func(func_queue);
-			printf("\nИСКОМАЯ ПОДПОСЛЕДОВАТЕЛЬНОСТЬ:\n");
+			printf("\nРРЎРљРћРњРђРЇ РџРћР”РџРћРЎР›Р•Р”РћР’РђРўР•Р›Р¬РќРћРЎРўР¬:\n");
 			out_list_func(sub_func_queue);
 			for (int h = 0; h < size; h++) {
 				if (index[h] == -1)
@@ -502,7 +502,7 @@ void GoInterface(int type, int function) {
 			if (flag1 == size - 1)
 				printf("\nERROR 404: not found\n");
 			else {
-				printf("НАЙДЕНО по следующим индексам:\n");
+				printf("РќРђР™Р”Р•РќРћ РїРѕ СЃР»РµРґСѓСЋС‰РёРј РёРЅРґРµРєСЃР°Рј:\n");
 				for (int k = 0; k < size; k++)
 					printf("%d\n", index[k]);
 			}
@@ -517,17 +517,17 @@ void GoInterface(int type, int function) {
 	if (type == 2) {
 		Queue *string_queue = queue_alloc();
 		string_queue = init_queue(string_queue);
-		printf("\nСТРОКИ\n\n");
+		printf("\nРЎРўР РћРљР\n\n");
 		string_list_set(string_queue);
 
 		if (function == 1) {
 			Queue* new_queue;
 			Queue *func_queue2 = queue_alloc();
 			func_queue2 = init_queue(func_queue2);
-			printf("\nФУНКЦИИ\n\n");
+			printf("\nР¤РЈРќРљР¦РР\n\n");
 			func_list_set(func_queue2);
 			new_queue = concat(string_queue, func_queue2);
-			printf("\nКОНКАТЕНАЦИЯ проведена\nКОНКАТЕНИРОВАННАЯ ОЧЕРЕДЬ:\n");
+			printf("\nРљРћРќРљРђРўР•РќРђР¦РРЇ РїСЂРѕРІРµРґРµРЅР°\nРљРћРќРљРђРўР•РќРР РћР’РђРќРќРђРЇ РћР§Р•Р Р•Р”Р¬:\n");
 			out_concate_func(new_queue, string_queue->size, func_queue2->size);
 			free(string_queue);
 			free(func_queue2);
@@ -536,16 +536,16 @@ void GoInterface(int type, int function) {
 		if (function == 2) {
 			Queue* new_string_queue;
 			int p, *arr;
-			printf("Введите какое количество элементов будем извлекать (max = %d)-->", string_queue->size);
+			printf("Р’РІРµРґРёС‚Рµ РєР°РєРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ Р±СѓРґРµРј РёР·РІР»РµРєР°С‚СЊ (max = %d)-->", string_queue->size);
 			do {
 				scanf_s("%d", &p);
 				rewind(stdin);
 				if (p > string_queue->size || p<0)
-					printf("ОШИБКА: повторите ввод->");
+					printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 			} while (p > string_queue->size || p<0);
 			arr = index_for_extract(string_queue, p);
 			new_string_queue = extract_subsequence(string_queue, arr, p);
-			printf("\nИЗВЛЕЧЕНИЕ проведено:\n");
+			printf("\nРР—Р’Р›Р•Р§Р•РќРР• РїСЂРѕРІРµРґРµРЅРѕ:\n");
 			out_list_string(new_string_queue);
 			free(string_queue);
 			free(new_string_queue);
@@ -555,13 +555,13 @@ void GoInterface(int type, int function) {
 			int* index;
 			sub_string_queue = queue_alloc();
 			sub_string_queue = init_queue(sub_string_queue);
-			printf("\nВведите ПОДПОСЛЕДОВАТЕЛЬНОСТЬ СТРОК\n");
+			printf("\nР’РІРµРґРёС‚Рµ РџРћР”РџРћРЎР›Р•Р”РћР’РђРўР•Р›Р¬РќРћРЎРўР¬ РЎРўР РћРљ\n");
 			string_list_set(sub_string_queue);
 			index = search_subsequence(string_queue, sub_string_queue, compare_string);
 			int size = string_queue->size;
-			printf("\nИСХОДНАЯ ОЧЕРЕДЬ:\n");
+			printf("\nРРЎРҐРћР”РќРђРЇ РћР§Р•Р Р•Р”Р¬:\n");
 			out_list_string(string_queue);
-			printf("\nИСКОМАЯ ПОДПОСЛЕДОВАТЕЛЬНОСТЬ:\n");
+			printf("\nРРЎРљРћРњРђРЇ РџРћР”РџРћРЎР›Р•Р”РћР’РђРўР•Р›Р¬РќРћРЎРўР¬:\n");
 			out_list_string(sub_string_queue);
 			for (int h = 0; h < size; h++) {
 				if (index[h] == -1)
@@ -570,7 +570,7 @@ void GoInterface(int type, int function) {
 			if (flag1 == size)
 				printf("\nERROR 404: not found\n");
 			else {
-				printf("НАЙДЕНО по следующим индексам:\n");
+				printf("РќРђР™Р”Р•РќРћ РїРѕ СЃР»РµРґСѓСЋС‰РёРј РёРЅРґРµРєСЃР°Рј:\n");
 				for (int k = 0; k < size; k++)
 					printf("%d\n", index[k]);
 			}
@@ -585,7 +585,7 @@ void GoInterface(int type, int function) {
 		;
 }
 
-//Функции concat, extract, search
+//Р¤СѓРЅРєС†РёРё concat, extract, search
 
 Queue* concat(Queue* queue1, Queue* queue2) {
 	Queue* new_queue = queue_alloc();
@@ -673,22 +673,22 @@ int compare_func(void* f1, void* f2) {
 int* index_set(Queue* queue, int p) {
 	int s, i = 0;
 	int* arr = (int*)malloc(p * sizeof(int));
-	printf("Введите индекс %d-го элемента, учитывая 0-ой элемент (голова очереди)-->", i);
+	printf("Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ %d-РіРѕ СЌР»РµРјРµРЅС‚Р°, СѓС‡РёС‚С‹РІР°СЏ 0-РѕР№ СЌР»РµРјРµРЅС‚ (РіРѕР»РѕРІР° РѕС‡РµСЂРµРґРё)-->", i);
 	do {
 		scanf_s("%d", &s);
 		rewind(stdin);
 		if (s >= queue->size || s < 0)
-			printf("ОШИБКА: повторите ввод->");
+			printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 	} while (s >= queue->size || s < 0);
 	arr[i] = s;
 
 	for (i = 1; i < p; i++) {
-		printf("Введите индекс %d-го элемента, учитывая 0-ой элемент (голова очереди)-->", i);
+		printf("Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ %d-РіРѕ СЌР»РµРјРµРЅС‚Р°, СѓС‡РёС‚С‹РІР°СЏ 0-РѕР№ СЌР»РµРјРµРЅС‚ (РіРѕР»РѕРІР° РѕС‡РµСЂРµРґРё)-->", i);
 		do {
 			scanf_s("%d", &s);
 			rewind(stdin);
 			if (s >= queue->size || s < 0 || arr[i - 1] >= s)
-				printf("ОШИБКА: повторите ввод->");
+				printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 		} while (s >= queue->size || s < 0 || arr[i - 1] >= s);
 		arr[i] = s;
 		if (s == queue->size - 1 && i != p - 1) {
@@ -712,7 +712,7 @@ int* index_for_extract(Queue* queue, int count) {
 				flag = FALSE;
 		}
 		if (flag == TRUE) {
-			printf("ОШИБКА: повторите ввод\n");
+			printf("РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ\n");
 		}
 	} while (flag == TRUE);
 	return arr;

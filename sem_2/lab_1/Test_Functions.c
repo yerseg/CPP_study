@@ -7,10 +7,10 @@
 
 void Testing() {
 	int flag[5];
-	int stud_count = 3, lect_count = 3; //количество студентов и преподавателей
+	int stud_count = 3, lect_count = 3; //РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ Рё РїСЂРµРїРѕРґР°РІР°С‚РµР»РµР№
 	setlocale(LC_ALL, "Rus");
 
-	Array* Lect_Arr = array_alloc(); //выделяем память под структуру Array
+	Array* Lect_Arr = array_alloc(); //РІС‹РґРµР»СЏРµРј РїР°РјСЏС‚СЊ РїРѕРґ СЃС‚СЂСѓРєС‚СѓСЂСѓ Array
 	Array* Stud_Arr = array_alloc();
 
 	(Array*)array_set(Lect_Arr, lect_count);
@@ -21,7 +21,7 @@ void Testing() {
 		lect = (Lecturer*)lect_alloc();
 		int k = 0, l = 0, s = 0;
 
-		//Заполнение полей
+		//Р—Р°РїРѕР»РЅРµРЅРёРµ РїРѕР»РµР№
 
 		lect->firstName = (char*)malloc(5 * sizeof(char));
 		lect->middleName = (char*)malloc(5 * sizeof(char));
@@ -52,7 +52,7 @@ void Testing() {
 
 		lect->grade = 0+i;
 
-		Lect_Arr->memory_ptr[i] = (void*)lect; //отправили в ячейку динмассива
+		Lect_Arr->memory_ptr[i] = (void*)lect; //РѕС‚РїСЂР°РІРёР»Рё РІ СЏС‡РµР№РєСѓ РґРёРЅРјР°СЃСЃРёРІР°
 	}
 
 	Student* stud;
@@ -60,7 +60,7 @@ void Testing() {
 		stud = (Student*)stud_alloc();
 		int k = 0, l = 0, s = 0;
 
-		//Заполнение полей
+		//Р—Р°РїРѕР»РЅРµРЅРёРµ РїРѕР»РµР№
 
 		stud->firstName = (char*)malloc(5 * sizeof(char));
 		stud->middleName = (char*)malloc(5 * sizeof(char));
@@ -91,7 +91,7 @@ void Testing() {
 
 		stud->rate = 3+i;
 
-		Stud_Arr->memory_ptr[i] = (void*)stud; //отправили в ячейку динмассива
+		Stud_Arr->memory_ptr[i] = (void*)stud; //РѕС‚РїСЂР°РІРёР»Рё РІ СЏС‡РµР№РєСѓ РґРёРЅРјР°СЃСЃРёРІР°
 	}
 
 	flag[0] = test_concate(Lect_Arr, Stud_Arr);
@@ -105,7 +105,7 @@ void Testing() {
 		lect1 = (Lecturer*)lect_alloc();
 		int k = 0, l = 0, s = 0;
 
-		//Заполнение полей
+		//Р—Р°РїРѕР»РЅРµРЅРёРµ РїРѕР»РµР№
 
 		lect1->firstName = (char*)malloc(5 * sizeof(char));
 		lect1->middleName = (char*)malloc(5 * sizeof(char));
@@ -136,7 +136,7 @@ void Testing() {
 
 		lect1->grade = 0;
 
-		Lect_Arr1->memory_ptr[i] = (void*)lect1; //отправили в ячейку динмассива
+		Lect_Arr1->memory_ptr[i] = (void*)lect1; //РѕС‚РїСЂР°РІРёР»Рё РІ СЏС‡РµР№РєСѓ РґРёРЅРјР°СЃСЃРёРІР°
 	}
 
 	flag[2] = test_map_lect(Lect_Arr1);
@@ -150,7 +150,7 @@ void Testing() {
 		stud1 = (Student*)stud_alloc();
 		int k = 0, l = 0, s = 0;
 
-		//Заполнение полей
+		//Р—Р°РїРѕР»РЅРµРЅРёРµ РїРѕР»РµР№
 
 		stud1->firstName = (char*)malloc(5 * sizeof(char));
 		stud1->middleName = (char*)malloc(5 * sizeof(char));
@@ -181,25 +181,25 @@ void Testing() {
 
 		stud1->rate = 3 + i;
 
-		Stud_Arr1->memory_ptr[i] = (void*)stud1; //отправили в ячейку динмассива
+		Stud_Arr1->memory_ptr[i] = (void*)stud1; //РѕС‚РїСЂР°РІРёР»Рё РІ СЏС‡РµР№РєСѓ РґРёРЅРјР°СЃСЃРёРІР°
 	}
 
 	flag[4] = test_map_stud(Stud_Arr1);
 	
 	if (flag[0] == FALSE || flag[1] == FALSE || flag[2] == FALSE || flag[3] == FALSE || flag[4] == FALSE) {
 		if (flag[0] == FALSE)
-			printf("Конкатенация: ОШИБКА\n");
+			printf("РљРѕРЅРєР°С‚РµРЅР°С†РёСЏ: РћРЁРР‘РљРђ\n");
 		if (flag[1] == FALSE)
-			printf("Where с преподавателями: ОШИБКА\n");
+			printf("Where СЃ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏРјРё: РћРЁРР‘РљРђ\n");
 		if (flag[2] == FALSE)
-			printf("Map с преподавателями: ОШИБКА\n");
+			printf("Map СЃ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏРјРё: РћРЁРР‘РљРђ\n");
 		if (flag[3] == FALSE)
-			printf("Where с студентами: ОШИБКА\n");
+			printf("Where СЃ СЃС‚СѓРґРµРЅС‚Р°РјРё: РћРЁРР‘РљРђ\n");
 		if (flag[4] == FALSE)
-			printf("Map с студентами: ОШИБКА\n");
+			printf("Map СЃ СЃС‚СѓРґРµРЅС‚Р°РјРё: РћРЁРР‘РљРђ\n");
 	}
 	else
-		printf("Все функции работают КОРРЕКТНО\n");
+		printf("Р’СЃРµ С„СѓРЅРєС†РёРё СЂР°Р±РѕС‚Р°СЋС‚ РљРћР Р Р•РљРўРќРћ\n");
 }
 
 int test_concate(Array* lect, Array* stud) {

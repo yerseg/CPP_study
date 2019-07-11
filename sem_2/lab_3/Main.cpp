@@ -41,12 +41,12 @@ int func6(int n) {
 
 void GoInterface(int type, int function) {
 	if (type == 2) {
-		cout << "ÑÒÐÎÊÈ\n" << endl;
+		cout << "Ð¡Ð¢Ð ÐžÐšÐ˜\n" << endl;
 		if (function == 1) {
-			cout << "MAP ïðåîáðàçóåò êàæäóþ ñòðîêó äåðåâà â ââåä¸ííóþ ñòðîêó\n";
+			cout << "MAP Ð¿Ñ€ÐµÐ¾Ð±Ñ€Ð°Ð·ÑƒÐµÑ‚ ÐºÐ°Ð¶Ð´ÑƒÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð´ÐµÑ€ÐµÐ²Ð° Ð² Ð²Ð²ÐµÐ´Ñ‘Ð½Ð½ÑƒÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ\n";
 			Tree<string> *string_tree = new Tree<string>;
 			string_tree->SetTree();
-			cout << "Ââåäèòå ïðåîáðàçóþùóþ ñòðîêó: " << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ñ€ÐµÐ¾Ð±Ñ€Ð°Ð·ÑƒÑŽÑ‰ÑƒÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ: " << endl;
 			string for_map; cin >> for_map;
 			string_tree->map(for_map);
 			string_tree->PrintByLevels();
@@ -54,7 +54,7 @@ void GoInterface(int type, int function) {
 			delete string_tree;
 		}
 		if (function == 2) {
-			cout << "WHERE âåðí¸ò äåðåâî, ñîñòîÿùåå òîëüêî èç ñòðîê, êîëè÷åñòâî ñèìâîëîâ â êîòîðûõ < 7\n\n";
+			cout << "WHERE Ð²ÐµÑ€Ð½Ñ‘Ñ‚ Ð´ÐµÑ€ÐµÐ²Ð¾, ÑÐ¾ÑÑ‚Ð¾ÑÑ‰ÐµÐµ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¸Ð· ÑÑ‚Ñ€Ð¾Ðº, ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð² Ð² ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ñ… < 7\n\n";
 			Tree<string> *string_tree = new Tree<string>;
 			Tree<string> *res_string_tree = new Tree<string>;
 			string_tree->SetTree();
@@ -68,14 +68,14 @@ void GoInterface(int type, int function) {
 			delete res_string_tree;
 		}
 		if (function == 3) {
-			cout << "Ïåðâîå äåðåâî äëÿ ñëèÿíèÿ:" << endl;
+			cout << "ÐŸÐµÑ€Ð²Ð¾Ðµ Ð´ÐµÑ€ÐµÐ²Ð¾ Ð´Ð»Ñ ÑÐ»Ð¸ÑÐ½Ð¸Ñ:" << endl;
 			Tree<string> *first_string_tree = new Tree<string>;
 			first_string_tree->SetTree();
-			cout << "Âòîðîå äåðåâî äëÿ ñëèÿíèÿ:" << endl;
+			cout << "Ð’Ñ‚Ð¾Ñ€Ð¾Ðµ Ð´ÐµÑ€ÐµÐ²Ð¾ Ð´Ð»Ñ ÑÐ»Ð¸ÑÐ½Ð¸Ñ:" << endl;
 			Tree<string> *second_string_tree = new Tree<string>;
 			second_string_tree->SetTree();
 			second_string_tree->MergeTrees(first_string_tree);
-			cout << "Ðåçóëüòàò: " << endl;
+			cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚: " << endl;
 			first_string_tree->RCLrootPrint();
 			first_string_tree->PrintByLevels();
 			delete first_string_tree;
@@ -85,10 +85,10 @@ void GoInterface(int type, int function) {
 			Tree<string> *string_tree = new Tree<string>;
 			Tree<string> *res_string_tree = new Tree<string>;
 			string_tree->SetTree();
-			cout << "Ââåäèòå ñòðîêó: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ñ€Ð¾ÐºÑƒ: ";
 			string str; cin >> str;
 			string_tree->SubtreeExtraction(str, res_string_tree);
-			cout << "Ðåçóëüòàò èçâëå÷åíèÿ ïîääåðåâà ïî çàäàííîìó ýëåìåíòó: " << endl;
+			cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ð¸Ð·Ð²Ð»ÐµÑ‡ÐµÐ½Ð¸Ñ Ð¿Ð¾Ð´Ð´ÐµÑ€ÐµÐ²Ð° Ð¿Ð¾ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð¼Ñƒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñƒ: " << endl;
 			if (res_string_tree->GetRoot() == nullptr) cout << "ERROR 404" << endl;
 			else {
 				res_string_tree->RCLrootPrint();
@@ -99,12 +99,12 @@ void GoInterface(int type, int function) {
 
 		if (function == 5) {
 			Tree<string> *string_tree = new Tree<string>;
-			cout << "Ââåäèòå äåðåâî " << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÑ€ÐµÐ²Ð¾ " << endl;
 			string_tree->SetTree();
 			Tree<string> *string_subtree = new Tree<string>;
-			cout << "Ââåäèòå ïîääåðåâî " << endl;
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾Ð´Ð´ÐµÑ€ÐµÐ²Ð¾ " << endl;
 			string_subtree->SetTree();
-			if (string_tree->IfTreeContain(string_subtree)) cout << "ÍÀÉÄÅÍÎ" << endl;
+			if (string_tree->IfTreeContain(string_subtree)) cout << "ÐÐÐ™Ð”Ð•ÐÐž" << endl;
 			else cout << "ERROR 404: not found" << endl;
 			delete string_tree;
 			delete string_subtree;
@@ -113,9 +113,9 @@ void GoInterface(int type, int function) {
 		if (function == 6) {
 			Tree<string> *string_tree = new Tree<string>;
 			string_tree->SetTree();
-			cout << "Ââåäèòå ñòðîêó, äëÿ êîòîðîé íàäî ïðîâåðèòü, ñîäåðæèòñÿ ëè îíà â äåðåâå: ";
+			cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ñ€Ð¾ÐºÑƒ, Ð´Ð»Ñ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð½Ð°Ð´Ð¾ Ð¿Ñ€Ð¾Ð²ÐµÑ€Ð¸Ñ‚ÑŒ, ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ñ‚ÑÑ Ð»Ð¸ Ð¾Ð½Ð° Ð² Ð´ÐµÑ€ÐµÐ²Ðµ: ";
 			string str; cin >> str;
-			if (string_tree->IfElementContain(str)) cout << "ÑÎÄÅÐÆÈÒÑß" << endl;
+			if (string_tree->IfElementContain(str)) cout << "Ð¡ÐžÐ”Ð•Ð Ð–Ð˜Ð¢Ð¡Ð¯" << endl;
 			else cout << "ERROR 404: not found" << endl;
 			delete string_tree;
 		}
@@ -124,13 +124,13 @@ void GoInterface(int type, int function) {
 	}
 
 	if (type == 1) {
-		cout << "ÔÓÍÊÖÈÈ" << endl;
+		cout << "Ð¤Ð£ÐÐšÐ¦Ð˜Ð˜" << endl;
 		void *ptr[] = { (void*)func1, (void*)func2, (void*)func3, (void*)func4, (void*)func5 };
 			if (function == 1) {
-				cout << "MAP ïðåîáðàçóåò êàæäóþ ôóíêöèþ äåðåâà â ââåä¸ííóþ\n\n";
+				cout << "MAP Ð¿Ñ€ÐµÐ¾Ð±Ñ€Ð°Ð·ÑƒÐµÑ‚ ÐºÐ°Ð¶Ð´ÑƒÑŽ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÑŽ Ð´ÐµÑ€ÐµÐ²Ð° Ð² Ð²Ð²ÐµÐ´Ñ‘Ð½Ð½ÑƒÑŽ\n\n";
 				Tree<void*> *func_tree = new Tree<void*>;
 				func_tree->SetFunctionTree(ptr);
-				cout << "Ââåäèòå ïðåîáðàçóþùóþ ôóíêöèþ: " << endl;
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ñ€ÐµÐ¾Ð±Ñ€Ð°Ð·ÑƒÑŽÑ‰ÑƒÑŽ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÑŽ: " << endl;
 				int func_number;
 
 				do {
@@ -143,7 +143,7 @@ void GoInterface(int type, int function) {
 				delete func_tree;
 			}
 			if (function == 2) {
-				cout << "WHERE âåðí¸ò äåðåâî, ñîñòîÿùåå òîëüêî èç ôóíêöèé, f(5)<10\n";
+				cout << "WHERE Ð²ÐµÑ€Ð½Ñ‘Ñ‚ Ð´ÐµÑ€ÐµÐ²Ð¾, ÑÐ¾ÑÑ‚Ð¾ÑÑ‰ÐµÐµ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¸Ð· Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¹, f(5)<10\n";
 				Tree<void*> *func_tree = new Tree<void*>;
 				Tree<void*> *res_func_tree = new Tree<void*>;
 				func_tree->SetFunctionTree(ptr);
@@ -157,14 +157,14 @@ void GoInterface(int type, int function) {
 				delete res_func_tree;
 			}
 			if (function == 3) {
-				cout << "Ïåðâîå äåðåâî äëÿ ñëèÿíèÿ:" << endl;
+				cout << "ÐŸÐµÑ€Ð²Ð¾Ðµ Ð´ÐµÑ€ÐµÐ²Ð¾ Ð´Ð»Ñ ÑÐ»Ð¸ÑÐ½Ð¸Ñ:" << endl;
 				Tree<void*> *first_functional_tree = new Tree<void*>;
 				first_functional_tree->SetFunctionTree(ptr);
-				cout << "Âòîðîå äåðåâî äëÿ ñëèÿíèÿ:" << endl;
+				cout << "Ð’Ñ‚Ð¾Ñ€Ð¾Ðµ Ð´ÐµÑ€ÐµÐ²Ð¾ Ð´Ð»Ñ ÑÐ»Ð¸ÑÐ½Ð¸Ñ:" << endl;
 				Tree<void*> *second_functional_tree = new Tree<void*>;
 				second_functional_tree->SetFunctionTree(ptr);
 				second_functional_tree->MergeTrees(first_functional_tree);
-				cout << "Ðåçóëüòàò: " << endl;
+				cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚: " << endl;
 				first_functional_tree->PrintByLevels();
 				first_functional_tree->RCLrootPrint();
 				first_functional_tree->PrintValueFunction();
@@ -175,7 +175,7 @@ void GoInterface(int type, int function) {
 				Tree<void*> *functional_tree = new Tree<void*>;
 				Tree<void*> *res_functional_tree = new Tree<void*>;
 				functional_tree->SetFunctionTree(ptr);
-				cout << "Âûáåðèòå ôóíêöèþ äëÿ èçâëå÷åíèÿ: " << endl;
+				cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÑŽ Ð´Ð»Ñ Ð¸Ð·Ð²Ð»ÐµÑ‡ÐµÐ½Ð¸Ñ: " << endl;
 				int func_number;
 				do {
 					cin >> func_number;
@@ -189,12 +189,12 @@ void GoInterface(int type, int function) {
 			}
 			if (function == 5) {
 				Tree<void*> *func_tree = new Tree<void*>;
-				cout << "Ââåäèòå äåðåâî " << endl;
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÑ€ÐµÐ²Ð¾ " << endl;
 				func_tree->SetFunctionTree(ptr);
 				Tree<void*> *func_subtree = new Tree<void*>;
-				cout << "Ââåäèòå ïîääåðåâî " << endl;
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð¾Ð´Ð´ÐµÑ€ÐµÐ²Ð¾ " << endl;
 				func_subtree->SetFunctionTree(ptr);
-				if (func_tree->IfTreeContain(func_subtree)) cout << "ÑÎÄÅÐÆÈÒÑß" << endl;
+				if (func_tree->IfTreeContain(func_subtree)) cout << "Ð¡ÐžÐ”Ð•Ð Ð–Ð˜Ð¢Ð¡Ð¯" << endl;
 				else cout << "ERROR 404: not found" << endl;
 				delete func_tree;
 				delete func_subtree;
@@ -202,13 +202,13 @@ void GoInterface(int type, int function) {
 			if (function == 6) {
 				Tree<void*> *func_tree = new Tree<void*>;
 				func_tree->SetFunctionTree(ptr);
-				cout << "Âûáåðèòå ôóíêöèþ, äëÿ êîòîðîé íàäî ïðîâåðèòü, ñîäåðæèòñÿ ëè îíà â äåðåâå: ";
+				cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÑŽ, Ð´Ð»Ñ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð½Ð°Ð´Ð¾ Ð¿Ñ€Ð¾Ð²ÐµÑ€Ð¸Ñ‚ÑŒ, ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ñ‚ÑÑ Ð»Ð¸ Ð¾Ð½Ð° Ð² Ð´ÐµÑ€ÐµÐ²Ðµ: ";
 				int func_number;
 				do {
 					cin >> func_number;
 				} while (func_number != 1 && func_number != 2 && func_number != 3 && func_number != 4 && func_number != 5);
 				void *func = ptr[func_number - 1];
-				if (func_tree->IfElementContain(func)) cout << "ÑÎÄÅÐÆÈÒÑß" << endl;
+				if (func_tree->IfElementContain(func)) cout << "Ð¡ÐžÐ”Ð•Ð Ð–Ð˜Ð¢Ð¡Ð¯" << endl;
 				else cout << "ERROR 404: not found" << endl;
 				delete func_tree;
 			}
@@ -220,40 +220,40 @@ void GoInterface(int type, int function) {
 int main() {
 	setlocale(LC_ALL, "Rus");
 	int track2, stop, track1, stop1 = 0, con1 = FALSE, con2 = FALSE, flag1 = 0, flag = 0;
-	cout << "Áóäåì ëè òåñòèðîâàòü ôóíêöèè 0 - NO/1 - YES -->";
+	cout << "Ð‘ÑƒÐ´ÐµÐ¼ Ð»Ð¸ Ñ‚ÐµÑÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ 0 - NO/1 - YES -->";
 	do {
 		scanf_s("%d", &stop);
 		rewind(stdin);
 		if (stop != 0 && stop != 1)
-			printf("ÎØÈÁÊÀ: ïîâòîðèòå ââîä->");
+			printf("ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->");
 	} while (stop != 0 && stop != 1);
 	if (stop == TRUE)
 		Testing();
 
 	do {
-		cout  << "Âûáåðèòå ñ êàêèì òèïîì äàííûõ ðàáîòàåì: 1 - ÔÓÍÊÖÈÈ, 2 - ÑÒÐÎÊÈ->\n";
+		cout  << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ ÐºÐ°ÐºÐ¸Ð¼ Ñ‚Ð¸Ð¿Ð¾Ð¼ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÐ¼: 1 - Ð¤Ð£ÐÐšÐ¦Ð˜Ð˜, 2 - Ð¡Ð¢Ð ÐžÐšÐ˜->\n";
 		do {
 			scanf_s("%d", &track1);
 			rewind(stdin);
 			if (track1 != 1 && track1 != 2)
-				printf("ÎØÈÁÊÀ: ïîâòîðèòå ââîä->");
+				printf("ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->");
 		} while (track1 != 1 && track1 != 2);
-		cout << "\nÂûáåðèòå ôóíêöèþ:\n 1 - map\n 2 - where\n 3 - ñëèÿíèå\n 4 - èçâëå÷åíèå ïîääåðåâà ïî çàäàííîìó ýëåìåíòó\n 5 - ïîèñê íà âõîæäåíèå ïîääåðåâà\n 6 - ïîèñê ýëåìåíòà íà âõîæäåíèå -->\n";
+		cout << "\nÐ’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ„ÑƒÐ½ÐºÑ†Ð¸ÑŽ:\n 1 - map\n 2 - where\n 3 - ÑÐ»Ð¸ÑÐ½Ð¸Ðµ\n 4 - Ð¸Ð·Ð²Ð»ÐµÑ‡ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð´Ð´ÐµÑ€ÐµÐ²Ð° Ð¿Ð¾ Ð·Ð°Ð´Ð°Ð½Ð½Ð¾Ð¼Ñƒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñƒ\n 5 - Ð¿Ð¾Ð¸ÑÐº Ð½Ð° Ð²Ñ…Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð´Ð´ÐµÑ€ÐµÐ²Ð°\n 6 - Ð¿Ð¾Ð¸ÑÐº ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½Ð° Ð²Ñ…Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ -->\n";
 		do {
 			scanf_s("%d", &track2);
 			rewind(stdin);
 			if (track2 != 1 && track2 != 2 && track2 != 3 && track2 != 4 && track2 != 5 && track2 != 6)
-				printf("ÎØÈÁÊÀ: ïîâòîðèòå ââîä->");
+				printf("ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->");
 		} while (track2 != 1 && track2 != 2 && track2 != 3 && track2 != 4 && track2 != 5 && track2 != 6);
 
 		GoInterface(track1, track2);
 
-		printf("\nÐÀÁÎÒÀ ÇÀÂÅÐØÅÍÀ\n\nÏÐÎÄÎËÆÈÒÜ ðàáîòó ïðîãðàììû? (1 - äà, 0 - íåò)-->");
+		printf("\nÐ ÐÐ‘ÐžÐ¢Ð Ð—ÐÐ’Ð•Ð Ð¨Ð•ÐÐ\n\nÐŸÐ ÐžÐ”ÐžÐ›Ð–Ð˜Ð¢Ð¬ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹? (1 - Ð´Ð°, 0 - Ð½ÐµÑ‚)-->");
 		do {
 			scanf_s("%d", &stop);
 			rewind(stdin);
 			if (stop != TRUE && stop != FALSE)
-				printf("ÎØÈÁÊÀ: ïîâòîðèòå ââîä->");
+				printf("ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->");
 		} while (stop != TRUE && stop != FALSE);
 	} while (stop == TRUE);
 

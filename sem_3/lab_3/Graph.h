@@ -59,19 +59,19 @@ Graph<T>::Graph(int n) {
 		for (int j = 0; j < number; j++)
 			matrix[i].push_back(0);
 
-	cout << "Введите матрицу смежности неориентированного графа G: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РјР°С‚СЂРёС†Сѓ СЃРјРµР¶РЅРѕСЃС‚Рё РЅРµРѕСЂРёРµРЅС‚РёСЂРѕРІР°РЅРЅРѕРіРѕ РіСЂР°С„Р° G: " << endl;
 	for (int i = 0; i < number; i++)
 		for (int j = i; j < number; j++) {
 			T weight;
 			do {
-				cout << "Вес ребра между " << i << " и " << j << " вершиной (в случае отсутствия ребра = 0): ";
+				cout << "Р’РµСЃ СЂРµР±СЂР° РјРµР¶РґСѓ " << i << " Рё " << j << " РІРµСЂС€РёРЅРѕР№ (РІ СЃР»СѓС‡Р°Рµ РѕС‚СЃСѓС‚СЃС‚РІРёСЏ СЂРµР±СЂР° = 0): ";
 				while (!(cin >> weight)) {
 					cin.clear();
-					cout << "ERROR: введите число--> " << endl;
+					cout << "ERROR: РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ--> " << endl;
 					while (cin.get() != '\n') continue;
 				}
 				if (weight < 0)
-					cout << "ОШИБКА: повторите ввод->";
+					cout << "РћРЁРР‘РљРђ: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->";
 			} while (weight < 0);
 			matrix[i][j] = weight;
 			cout << endl;
@@ -91,7 +91,7 @@ Graph<T>::~Graph() {
 
 template <typename T>
 void Graph<T>::printMatrix() {
-	cout << "Граф G задан следующей матрицой смежности: " << endl;
+	cout << "Р“СЂР°С„ G Р·Р°РґР°РЅ СЃР»РµРґСѓСЋС‰РµР№ РјР°С‚СЂРёС†РѕР№ СЃРјРµР¶РЅРѕСЃС‚Рё: " << endl;
 	for (int i = 0; i < number; i++) {
 		cout << " ";
 		for (int j = 0; j < number; j++) {
@@ -142,7 +142,7 @@ vector<vector<T> *> Graph<T>::FindShortestPath() {
 template <typename T>
 void Graph<T>::ConstructPath(vector<int> * path, int u, int v) {
 	if (path[u][v] == -INF)
-		throw BadIndex("Ошибка: между данными вершинами нет рёбер!\n");
+		throw BadIndex("РћС€РёР±РєР°: РјРµР¶РґСѓ РґР°РЅРЅС‹РјРё РІРµСЂС€РёРЅР°РјРё РЅРµС‚ СЂС‘Р±РµСЂ!\n");
 	if (u == v)
 		cout << u << endl;
 	else {

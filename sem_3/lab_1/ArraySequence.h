@@ -164,7 +164,7 @@ void ArraySequence<T>::printAll() {
 		throw (SequenceException(0));
 	else {
 		for (int i = 0; i < this->length; i++)
-			cout << "Ýëåìåíò " << i << ": " << ptr[i] << endl;
+			cout << "Ð­Ð»ÐµÐ¼ÐµÐ½Ñ‚ " << i << ": " << ptr[i] << endl;
 	}
 	cout << '\n';
 }

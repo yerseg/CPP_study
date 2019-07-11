@@ -149,7 +149,7 @@ bool Tree<T>::check(TreeNode<void*> *node) {
 }
 
 template <typename T>
-void Tree<T>::where(TreeNode<T> *node, Tree<T> *new_tree) { // УКАЗАТЕЛЬ на дерево
+void Tree<T>::where(TreeNode<T> *node, Tree<T> *new_tree) { // РЈРљРђР—РђРўР•Р›Р¬ РЅР° РґРµСЂРµРІРѕ
 	if (node != nullptr) {
 		if (check(node)) {
 			T key = node->data;
@@ -260,21 +260,21 @@ int Tree<T>::GetKids() {
 }
 
 template <typename T>
-void Tree<T>::RCLrootPrint() { // КПЛ обход
-	cout << "321K обход ->" << endl;
+void Tree<T>::RCLrootPrint() { // РљРџР› РѕР±С…РѕРґ
+	cout << "321K РѕР±С…РѕРґ ->" << endl;
 	RCLrootPrint(root);
 	cout << endl;
 	cout << endl;
 }
 
 template <typename T>
-void Tree<T>::SetTree() {  // для строк
-	cout << "Введите количество элементов в дереве: ";
+void Tree<T>::SetTree() {  // РґР»СЏ СЃС‚СЂРѕРє
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РІ РґРµСЂРµРІРµ: ";
 	int amount_of_elements;
 	do { 
 		cin >> amount_of_elements; 
 	} while (amount_of_elements < 1);
-	cout << "Введите " << amount_of_elements << " строки: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ " << amount_of_elements << " СЃС‚СЂРѕРєРё: " << endl;
 	for (int i = 0; i < amount_of_elements; i++) {
 		cout << "  " << i + 1 << ": ";
 		T key; cin >> key;
@@ -283,13 +283,13 @@ void Tree<T>::SetTree() {  // для строк
 }
 
 template <typename T>
-void Tree<T>::SetFunctionTree(void **ptr) { // для функций
-	cout << "Список функций: " << endl;
+void Tree<T>::SetFunctionTree(void **ptr) { // РґР»СЏ С„СѓРЅРєС†РёР№
+	cout << "РЎРїРёСЃРѕРє С„СѓРЅРєС†РёР№: " << endl;
 	cout << " 1: x * 2\n 2: x^3\n 3: x + 1\n 4: x^2\n 5: x + 2\n";
-	cout << "Введите количество элементов в дереве: ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РІ РґРµСЂРµРІРµ: ";
 	int amount_of_elements;
 	do { cin >> amount_of_elements; } while (amount_of_elements < 1);
-	cout << "Выберите " << amount_of_elements << " функций из списка выше " << endl;
+	cout << "Р’С‹Р±РµСЂРёС‚Рµ " << amount_of_elements << " С„СѓРЅРєС†РёР№ РёР· СЃРїРёСЃРєР° РІС‹С€Рµ " << endl;
 	for (int i = 0; i < amount_of_elements; i++) {
 		int func_number;
 		do {
@@ -352,7 +352,7 @@ void Tree<T>::PrintByLevels() {
 	int max_level = 0;
 	while (pow(3, max_level) - 3 <= root->kids) 
 		max_level++;
-	cout << "Печать по уровням -> " << endl;
+	cout << "РџРµС‡Р°С‚СЊ РїРѕ СѓСЂРѕРІРЅСЏРј -> " << endl;
 	for (int i = 0; i < max_level; i++) {
 		PrintMentionedLevel(root, i);
 		cout << endl;

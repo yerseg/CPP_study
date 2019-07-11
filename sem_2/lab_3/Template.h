@@ -46,25 +46,25 @@ class Tree {
 	// 1. map
 	void map(TreeNode<T> *node, T value);
 	
-	// check для строк
+	// check РґР»СЏ СЃС‚СЂРѕРє
 	bool check(TreeNode<string> *node);
 
-	// check для функций
+	// check РґР»СЏ С„СѓРЅРєС†РёР№
 	bool check(TreeNode<void*> *node);
 
 	// 2. where
 	void where(TreeNode<T> *node, Tree<T> *new_tree);
 
-	// 3. слияние
+	// 3. СЃР»РёСЏРЅРёРµ
 	void MergeTrees(TreeNode<T> *node_of_1st_tree, Tree<T> *second_tree);
 
-	// 4. извлечение поддерева по заданному элементу
+	// 4. РёР·РІР»РµС‡РµРЅРёРµ РїРѕРґРґРµСЂРµРІР° РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ СЌР»РµРјРµРЅС‚Сѓ
 	void SubtreeExtraction(TreeNode<T> *node, T value, Tree<T> *res_tree, int *flag);
 
-	// 5. поиск элемента на вхождение
+	// 5. РїРѕРёСЃРє СЌР»РµРјРµРЅС‚Р° РЅР° РІС…РѕР¶РґРµРЅРёРµ
 	void IfElementContain(TreeNode<T> *node, T value, bool* check_ptr);
 
-	// 6. поиск дерева на вхождение
+	// 6. РїРѕРёСЃРє РґРµСЂРµРІР° РЅР° РІС…РѕР¶РґРµРЅРёРµ
 	void IfTreeContain(TreeNode<T> *big_node, TreeNode<T> *small_node, bool *check_ptr, bool *if_same);
 
 	void PrintMentionedLevel(TreeNode<T> *node, int level);

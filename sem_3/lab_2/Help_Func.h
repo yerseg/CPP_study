@@ -66,7 +66,7 @@ template <typename T>
 void Sorts_Compare(Sequence<T> * seq1, Sequence<T> * seq2, Sorter<T> sort) {
 	long int time_Q = time_QuickSort(seq2, sort);
 	long int time_I = time_InsectionSort(seq1, sort);
-	cout << "Cîðòèðîâêà âñòàâêàìè: " << time_I << " ìêñ" << endl << "Áûñòðàÿ ñîðòèðîâêà: " << time_Q << " ìêñ " << endl;
+	cout << "CÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð²ÑÑ‚Ð°Ð²ÐºÐ°Ð¼Ð¸: " << time_I << " Ð¼ÐºÑ" << endl << "Ð‘Ñ‹ÑÑ‚Ñ€Ð°Ñ ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ°: " << time_Q << " Ð¼ÐºÑ " << endl;
 }
 
 template <typename T>

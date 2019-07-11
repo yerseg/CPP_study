@@ -11,7 +11,7 @@
 using namespace std;
 
 void Test_Sort() {
-	cout << "ÇÀÏÓÑÊ ïðîñòîãî ÒÅÑÒÈÐÎÂÀÍÈß" << endl;
+	cout << "Ã‡Ã€ÃÃ“Ã‘ÃŠ Ã¯Ã°Ã®Ã±Ã²Ã®Ã£Ã® Ã’Ã…Ã‘Ã’ÃˆÃÃŽÃ‚Ã€ÃÃˆÃŸ" << endl;
 
 	bool flag1 = false, flag2 = false;
 	Sorter<int> sort;
@@ -26,24 +26,24 @@ void Test_Sort() {
 
 	ListSequence<int> test_arr2 = test_arr;
 
-	cout << "ÑÎÐÒÈÐÎÂÊÀ ÂÑÒÀÂÊÀÌÈ" << endl;
+	cout << "Ã‘ÃŽÃÃ’ÃˆÃÃŽÃ‚ÃŠÃ€ Ã‚Ã‘Ã’Ã€Ã‚ÃŠÃ€ÃŒÃˆ" << endl;
 	sort.InsectionSort(&test_arr);
 	if (test_arr.Get(0) == 0 && test_arr.Get(1) == 25 && test_arr.Get(2) == 79 && test_arr.Get(3) == 239 && test_arr.Get(4) == 477 && test_arr.Get(5) == 1098)
 		flag1 = true;
 
-	cout << "ÁÛÑÒÐÀß ÑÎÐÒÈÐÎÂÊÀ" << endl;
+	cout << "ÃÃ›Ã‘Ã’ÃÃ€ÃŸ Ã‘ÃŽÃÃ’ÃˆÃÃŽÃ‚ÃŠÃ€" << endl;
 	sort.QuickSort(&test_arr2);
 	if (test_arr2.Get(0) == 0 && test_arr2.Get(1) == 25 && test_arr2.Get(2) == 79 && test_arr2.Get(3) == 239 && test_arr2.Get(4) == 477 && test_arr2.Get(5) == 1098)
 		flag2 = true;
 
 	if (flag1 && flag2)
-		cout << "ÎÁÅ ÑÎÐÒÈÐÎÂÊÈ ÐÀÁÎÒÀÞÒ ÂÅÐÍÎ" << endl;
+		cout << "ÃŽÃÃ… Ã‘ÃŽÃÃ’ÃˆÃÃŽÃ‚ÃŠÃˆ ÃÃ€ÃÃŽÃ’Ã€ÃžÃ’ Ã‚Ã…ÃÃÃŽ" << endl;
 	else if (!flag1 && flag2)
-		cout << "ÎØÈÁÊÀ Â ÑÎÐÒÈÐÎÂÊÅ ÂÑÒÀÂÊÀÌÈ" << endl;
+		cout << "ÃŽÃ˜ÃˆÃÃŠÃ€ Ã‚ Ã‘ÃŽÃÃ’ÃˆÃÃŽÃ‚ÃŠÃ… Ã‚Ã‘Ã’Ã€Ã‚ÃŠÃ€ÃŒÃˆ" << endl;
 	else if (flag1 && !flag2)
-		cout << "ÎØÈÁÊÀ Â ÁÛÑÒÐÎÉ ÑÎÐÒÈÐÎÂÊÅ" << endl;
+		cout << "ÃŽÃ˜ÃˆÃÃŠÃ€ Ã‚ ÃÃ›Ã‘Ã’ÃÃŽÃ‰ Ã‘ÃŽÃÃ’ÃˆÃÃŽÃ‚ÃŠÃ…" << endl;
 	else
-		cout << "ÎÁÅ ÑÎÐÒÈÐÎÂÊÈ ÐÀÁÎÒÀÞÒ ÍÅÏÐÀÂÈËÜÍÎ" << endl;
+		cout << "ÃŽÃÃ… Ã‘ÃŽÃÃ’ÃˆÃÃŽÃ‚ÃŠÃˆ ÃÃ€ÃÃŽÃ’Ã€ÃžÃ’ ÃÃ…ÃÃÃ€Ã‚ÃˆÃ‹ÃœÃÃŽ" << endl;
 }
 
 #endif /* TEST_H */

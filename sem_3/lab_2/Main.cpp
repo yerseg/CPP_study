@@ -25,81 +25,81 @@ int main() {
 		int section;
 
 		do {
-			cout << "Âûáåðèòå ðàçäåë:" << endl;
-			cout << "1 - Áèíàðíûé ïîèñê\n2 - Õåø-òàáëèöà\n3 - B/Â+-äåðåâî\n4 - Çàêîí÷èòü ðàáîòó\nÎòâåò:   ";
+			cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð´ÐµÐ»:" << endl;
+			cout << "1 - Ð‘Ð¸Ð½Ð°Ñ€Ð½Ñ‹Ð¹ Ð¿Ð¾Ð¸ÑÐº\n2 - Ð¥ÐµÑˆ-Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð°\n3 - B/Ð’+-Ð´ÐµÑ€ÐµÐ²Ð¾\n4 - Ð—Ð°ÐºÐ¾Ð½Ñ‡Ð¸Ñ‚ÑŒ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ\nÐžÑ‚Ð²ÐµÑ‚:   ";
 			while (!(cin >> section)) {
 				cin.clear();
-				cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+				cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 				while (cin.get() != '\n') continue;
 			}
 			if (section < 1 or section > 4)
-				cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+				cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 		} while (section != 1 && section != 2 && section != 3 && section != 4);
 
 		if (section == 1) {
 			int vvod;
 
 			do {
-				cout << "Âûáåðåòå ðåæèì ðàáîòû:\n1 - ðó÷íîé ââîä\n2 - àâòîìàòè÷åñêèé ââîä\nÎòâåò:    ";
+				cout << "Ð’Ñ‹Ð±ÐµÑ€ÐµÑ‚Ðµ Ñ€ÐµÐ¶Ð¸Ð¼ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹:\n1 - Ñ€ÑƒÑ‡Ð½Ð¾Ð¹ Ð²Ð²Ð¾Ð´\n2 - Ð°Ð²Ñ‚Ð¾Ð¼Ð°Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ð²Ð²Ð¾Ð´\nÐžÑ‚Ð²ÐµÑ‚:    ";
 				while (!(cin >> vvod)) {
 					cin.clear();
-					cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+					cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 					while (cin.get() != '\n') continue;
 				}
 				if (vvod != 1 && vvod != 2)
-					cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+					cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 			} while (vvod != 1 && vvod != 2);
 			
 			if (vvod == 1) {
 				ArraySequence<Student> ArraySeq;
 				int amount_of_el;
 				do {
-					cout << "Ââåäèòå êîëè÷åñòâî ñòóäåíòîâ â ïîñëåäîâàòåëüíîñòè: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: ";
 					while (!(cin >> amount_of_el)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (amount_of_el < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (amount_of_el < 1);
 
-				cout << "Ââîäèòå ôàìèëèè è äàòû ðîæäåíèÿ" << endl;
+				cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ð¸ Ð¸ Ð´Ð°Ñ‚Ñ‹ Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ" << endl;
 				for (int i = 0; i < amount_of_el; i++) {
-					cout << "Còóäåíò " << i << ":" << endl;
-					cout << "Èìÿ:  ";
+					cout << "CÑ‚ÑƒÐ´ÐµÐ½Ñ‚ " << i << ":" << endl;
+					cout << "Ð˜Ð¼Ñ:  ";
 					string name; cin >> name;
-					cout << "Äàòà ðîæäåíèÿ (÷åðåç ïðîáåë):\n";
+					cout << "Ð”Ð°Ñ‚Ð° Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ (Ñ‡ÐµÑ€ÐµÐ· Ð¿Ñ€Ð¾Ð±ÐµÐ»):\n";
 					int d; int m; int g;
 					do {
-						cout << "Ââåäèòå äåíü: ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ: ";
 						while (!(cin >> d)) {
 							cin.clear();
-							cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+							cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 							while (cin.get() != '\n') continue;
 						}
 						if (d > 31 || d < 1)
-							cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+							cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 					} while (d > 31 || d < 1);
 					do {
-						cout << "Ââåäèòå ìåñÿö: ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼ÐµÑÑÑ†: ";
 						while (!(cin >> m)) {
 							cin.clear();
-							cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+							cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 							while (cin.get() != '\n') continue;
 						}
 						if (m > 12 || m < 1)
-							cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+							cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 					} while (m > 12 || m < 1);
 					do {
-						cout << "Ââåäèòå ãîä: ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´: ";
 						while (!(cin >> g)) {
 							cin.clear();
-							cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+							cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 							while (cin.get() != '\n') continue;
 						}
 						if (g > 2018 || g < 1900)
-							cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+							cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 					} while (g > 2018 || g < 1900);
 					
 					Student stud = Student(name, d, m, g);
@@ -113,88 +113,88 @@ int main() {
 				ArraySeq.printAll();
 				arr1.printAll();
 
-				cout << "Ââåäèòå ýëåìåíò, êîòîðûé õîòèòå íàéòè:\n";
-				cout << "Còóäåíò: " << endl;
-				cout << "Èìÿ:  ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð½Ð°Ð¹Ñ‚Ð¸:\n";
+				cout << "CÑ‚ÑƒÐ´ÐµÐ½Ñ‚: " << endl;
+				cout << "Ð˜Ð¼Ñ:  ";
 				string name; cin >> name;
-				cout << "Äàòà ðîæäåíèÿ:\n";
+				cout << "Ð”Ð°Ñ‚Ð° Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ:\n";
 				int d; int m; int g;
 				do {
-					cout << "Ââåäèòå äåíü: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ: ";
 					while (!(cin >> d)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (d > 31 || d < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (d > 31 || d < 1);
 				do {
-					cout << "Ââåäèòå ìåñÿö: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼ÐµÑÑÑ†: ";
 					while (!(cin >> m)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (m > 12 || m < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (m > 12 || m < 1);
 				do {
-					cout << "Ââåäèòå ãîä: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´: ";
 					while (!(cin >> g)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (g > 2018 || g < 1900)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (g > 2018 || g < 1900);
 
 				int fib_n;
 				do {
-					cout << "Äëÿ áèíàðíîãî ïîèñêà ñ äåëåíèåì ÷èñëîì Ôèáîíà÷÷è ââåäèòå íîìåð ÷èñëà Ôèáîíà÷÷è: ";
+					cout << "Ð”Ð»Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ° Ñ Ð´ÐµÐ»ÐµÐ½Ð¸ÐµÐ¼ Ñ‡Ð¸ÑÐ»Ð¾Ð¼ Ð¤Ð¸Ð±Ð¾Ð½Ð°Ñ‡Ñ‡Ð¸ Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ñ‡Ð¸ÑÐ»Ð° Ð¤Ð¸Ð±Ð¾Ð½Ð°Ñ‡Ñ‡Ð¸: ";
 					while (!(cin >> fib_n)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (fib_n < 2 || fib_n > 15)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (fib_n < 2 || fib_n > 15);
 
 				int prop1; int prop2;
-				cout << "Äëÿ áèíàðíîãî ïîèñêà ñ äåëåíèåì îòðåçêîì ââåäèòå ïðîïîðöèè â ôîðìàòå X:Y\n";
+				cout << "Ð”Ð»Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ° Ñ Ð´ÐµÐ»ÐµÐ½Ð¸ÐµÐ¼ Ð¾Ñ‚Ñ€ÐµÐ·ÐºÐ¾Ð¼ Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¾Ð¿Ð¾Ñ€Ñ†Ð¸Ð¸ Ð² Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ðµ X:Y\n";
 				do {
-					cout << "Ââåäèòå X: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ X: ";
 					while (!(cin >> prop1)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (prop1 < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (prop1 < 1);
 				do {
-					cout << "Ââåäèòå Y: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Y: ";
 					while (!(cin >> prop2)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (prop2 < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (prop2 < 1);
 				
 				int atr;
 				do {
-					cout << "Âûáåðèòå àòðèáóò ïîèñêà:\n1 - èìÿ, 2 - äàòà ðîæäåíèÿ, 3 - îáà àòðèáóòà ";
+					cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚ Ð¿Ð¾Ð¸ÑÐºÐ°:\n1 - Ð¸Ð¼Ñ, 2 - Ð´Ð°Ñ‚Ð° Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ, 3 - Ð¾Ð±Ð° Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚Ð° ";
 					while (!(cin >> atr)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (atr != 1 && atr != 2 && atr != 3 && atr != 4)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (atr != 1 && atr != 2 && atr != 3 && atr != 4);
 				
 				Student stud_ = Student(name, d, m, g);
@@ -222,9 +222,9 @@ int main() {
 
 				try {
 					int index = Search_Binary_Base(&ArraySeq, stud_);
-					cout << "Èíäåêñ èñêîìîãî ñòóäåíòà â îòñîðòèðîâàííîé ïîñëåäîâàòåëüíîñòè: " << index << endl;
+					cout << "Ð˜Ð½Ð´ÐµÐºÑ Ð¸ÑÐºÐ¾Ð¼Ð¾Ð³Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð² Ð¾Ñ‚ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ð¾Ð¹ Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: " << index << endl;
 					Student res_stud = ArraySeq.Get(index);
-					cout << "Èñêîìûé ñòóäåíò: " << res_stud << endl;
+					cout << "Ð˜ÑÐºÐ¾Ð¼Ñ‹Ð¹ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚: " << res_stud << endl;
 				}
 				catch (ElementNotFoundException<Student> ex1) {
 					ex1.what();
@@ -236,7 +236,7 @@ int main() {
 					ex3.what();
 				}
 				try {
-					cout << "Âðåìÿ äëÿ áàçîâîãî áèíàðíîãî ïîèñêà: " << Time_For_Search_Binary_Base(&ArraySeq, stud_)[1] << " íñ" << endl;
+					cout << "Ð’Ñ€ÐµÐ¼Ñ Ð´Ð»Ñ Ð±Ð°Ð·Ð¾Ð²Ð¾Ð³Ð¾ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ°: " << Time_For_Search_Binary_Base(&ArraySeq, stud_)[1] << " Ð½Ñ" << endl;
 				}
 				catch (ElementNotFoundException<Student> ex1) {
 					ex1.what();
@@ -248,7 +248,7 @@ int main() {
 					ex3.what();
 				}
 				try {
-					cout << "Âðåìÿ äëÿ áèíàðíîãî ïîèñêà ñ äåëåíèåì çîëîòûì ñå÷åíèåì: " << Time_For_Search_Binary_Golden_Ratio(&ArraySeq, stud_)[1] << " íñ" << endl;
+					cout << "Ð’Ñ€ÐµÐ¼Ñ Ð´Ð»Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ° Ñ Ð´ÐµÐ»ÐµÐ½Ð¸ÐµÐ¼ Ð·Ð¾Ð»Ð¾Ñ‚Ñ‹Ð¼ ÑÐµÑ‡ÐµÐ½Ð¸ÐµÐ¼: " << Time_For_Search_Binary_Golden_Ratio(&ArraySeq, stud_)[1] << " Ð½Ñ" << endl;
 				}
 				catch (ElementNotFoundException<Student> ex1) {
 					ex1.what();
@@ -260,7 +260,7 @@ int main() {
 					ex3.what();
 				}
 				try {
-					cout << "Âðåìÿ äëÿ áèíàðíîãî ïîèñêà ñ äåëåíèåì ÷èñëîì Ôèáîíà÷÷è: " << Time_For_Search_Binary_Fibonacci(&ArraySeq, stud_, fib_n)[1] << " íñ" << endl;
+					cout << "Ð’Ñ€ÐµÐ¼Ñ Ð´Ð»Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ° Ñ Ð´ÐµÐ»ÐµÐ½Ð¸ÐµÐ¼ Ñ‡Ð¸ÑÐ»Ð¾Ð¼ Ð¤Ð¸Ð±Ð¾Ð½Ð°Ñ‡Ñ‡Ð¸: " << Time_For_Search_Binary_Fibonacci(&ArraySeq, stud_, fib_n)[1] << " Ð½Ñ" << endl;
 				}
 				catch (ElementNotFoundException<Student> ex1) {
 					ex1.what();
@@ -272,7 +272,7 @@ int main() {
 					ex3.what();
 				}
 				try {
-					cout << "Âðåìÿ äëÿ áèíàðíîãî ïîèñêà ñ äåëåíèåì îòðåçêîì: " << Time_For_Search_Binary_Own_Pair(&ArraySeq, stud_, prop1, prop2)[1] << " íñ" << endl;
+					cout << "Ð’Ñ€ÐµÐ¼Ñ Ð´Ð»Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ° Ñ Ð´ÐµÐ»ÐµÐ½Ð¸ÐµÐ¼ Ð¾Ñ‚Ñ€ÐµÐ·ÐºÐ¾Ð¼: " << Time_For_Search_Binary_Own_Pair(&ArraySeq, stud_, prop1, prop2)[1] << " Ð½Ñ" << endl;
 				}
 				catch (ElementNotFoundException<Student> ex1) {
 					ex1.what();
@@ -288,104 +288,104 @@ int main() {
 				ArraySequence<Student> ArraySeq;
 				int amount_of_el;
 				do {
-					cout << "Ââåäèòå êîëè÷åñòâî ñòóäåíòîâ â ïîñëåäîâàòåëüíîñòè: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: ";
 					while (!(cin >> amount_of_el)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (amount_of_el < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (amount_of_el < 1);
 
 				Rand_Stud_Seq_Gen(&ArraySeq, amount_of_el);
 
 				ArraySeq.printAll();
 
-				cout << "Ââåäèòå ýëåìåíò, êîòîðûé õîòèòå íàéòè:\n";
-				cout << "Còóäåíò: " << endl;
-				cout << "Èìÿ: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð½Ð°Ð¹Ñ‚Ð¸:\n";
+				cout << "CÑ‚ÑƒÐ´ÐµÐ½Ñ‚: " << endl;
+				cout << "Ð˜Ð¼Ñ: ";
 				string name; cin >> name;
-				cout << "Äàòà ðîæäåíèÿ (÷åðåç ïðîáåë):\n";
+				cout << "Ð”Ð°Ñ‚Ð° Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ (Ñ‡ÐµÑ€ÐµÐ· Ð¿Ñ€Ð¾Ð±ÐµÐ»):\n";
 				int d; int m; int g;
 				do {
-					cout << "Ââåäèòå äåíü: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ: ";
 					while (!(cin >> d)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (d > 31 || d < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (d > 31 || d < 1);
 				do {
-					cout << "Ââåäèòå ìåñÿö: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼ÐµÑÑÑ†: ";
 					while (!(cin >> m)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (m > 12 || m < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (m > 12 || m < 1);
 				do {
-					cout << "Ââåäèòå ãîä: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´: ";
 					while (!(cin >> g)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (g > 2018 || g < 1900)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (g > 2018 || g < 1900);
 
 				int fib_n;
 				do {
-					cout << "Äëÿ áèíàðíîãî ïîèñêà ñ äåëåíèåì ÷èñëîì Ôèáîíà÷÷è ââåäèòå íîìåð ÷èñëà Ôèáîíà÷÷è: ";
+					cout << "Ð”Ð»Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ° Ñ Ð´ÐµÐ»ÐµÐ½Ð¸ÐµÐ¼ Ñ‡Ð¸ÑÐ»Ð¾Ð¼ Ð¤Ð¸Ð±Ð¾Ð½Ð°Ñ‡Ñ‡Ð¸ Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ñ‡Ð¸ÑÐ»Ð° Ð¤Ð¸Ð±Ð¾Ð½Ð°Ñ‡Ñ‡Ð¸: ";
 					while (!(cin >> fib_n)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (fib_n < 2 || fib_n > 15)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (fib_n < 2 || fib_n > 15);
 
 				int prop1; int prop2;
-				cout << "Äëÿ áèíàðíîãî ïîèñêà ñ äåëåíèåì îòðåçêîì ââåäèòå ïðîïîðöèè â ôîðìàòå X:Y\n";
+				cout << "Ð”Ð»Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ° Ñ Ð´ÐµÐ»ÐµÐ½Ð¸ÐµÐ¼ Ð¾Ñ‚Ñ€ÐµÐ·ÐºÐ¾Ð¼ Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¾Ð¿Ð¾Ñ€Ñ†Ð¸Ð¸ Ð² Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ðµ X:Y\n";
 				do {
-					cout << "Ââåäèòå X: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ X: ";
 					while (!(cin >> prop1)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (prop1 < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (prop1 < 1);
 				do {
-					cout << "Ââåäèòå Y: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Y: ";
 					while (!(cin >> prop2)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (prop2 < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (prop2 < 1);
 
 				Student stud_ = Student(name, d, m, g);
 
 				int atr;
 				do {
-					cout << "Âûáåðèòå àòðèáóò ïîèñêà:\n1 - èìÿ, 2 - äàòà ðîæäåíèÿ, 3 - îáà àòðèáóòà ";
+					cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚ Ð¿Ð¾Ð¸ÑÐºÐ°:\n1 - Ð¸Ð¼Ñ, 2 - Ð´Ð°Ñ‚Ð° Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ, 3 - Ð¾Ð±Ð° Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚Ð° ";
 					while (!(cin >> atr)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (atr != 1 && atr != 2 && atr != 3 && atr != 4)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (atr != 1 && atr != 2 && atr != 3 && atr != 4);
 
 				if (atr == 1) {
@@ -411,9 +411,9 @@ int main() {
 
 				try {
 					int index = Search_Binary_Base(&ArraySeq, stud_);
-					cout << "Èíäåêñ èñêîìîãî ñòóäåíòà â îòñîðòèðîâàííîé ïîñëåäîâàòåëüíîñòè: " << index << endl;
+					cout << "Ð˜Ð½Ð´ÐµÐºÑ Ð¸ÑÐºÐ¾Ð¼Ð¾Ð³Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð² Ð¾Ñ‚ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ð¾Ð¹ Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: " << index << endl;
 					Student res_stud = ArraySeq.Get(index);
-					cout << "Èñêîìûé ñòóäåíò: " << res_stud << endl;
+					cout << "Ð˜ÑÐºÐ¾Ð¼Ñ‹Ð¹ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚: " << res_stud << endl;
 				}
 				catch (ElementNotFoundException<Student> ex1) {
 					ex1.what();
@@ -425,7 +425,7 @@ int main() {
 					ex3.what();
 				}
 				try {
-					cout << "Âðåìÿ äëÿ áàçîâîãî áèíàðíîãî ïîèñêà: " << Time_For_Search_Binary_Base(&ArraySeq, stud_)[1] << " íñ" << endl;
+					cout << "Ð’Ñ€ÐµÐ¼Ñ Ð´Ð»Ñ Ð±Ð°Ð·Ð¾Ð²Ð¾Ð³Ð¾ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ°: " << Time_For_Search_Binary_Base(&ArraySeq, stud_)[1] << " Ð½Ñ" << endl;
 				}
 				catch (ElementNotFoundException<Student> ex1) {
 					ex1.what();
@@ -437,7 +437,7 @@ int main() {
 					ex3.what();
 				}
 				try {
-					cout << "Âðåìÿ äëÿ áèíàðíîãî ïîèñêà ñ äåëåíèåì çîëîòûì ñå÷åíèåì: " << Time_For_Search_Binary_Golden_Ratio(&ArraySeq, stud_)[1] << " íñ" << endl;
+					cout << "Ð’Ñ€ÐµÐ¼Ñ Ð´Ð»Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ° Ñ Ð´ÐµÐ»ÐµÐ½Ð¸ÐµÐ¼ Ð·Ð¾Ð»Ð¾Ñ‚Ñ‹Ð¼ ÑÐµÑ‡ÐµÐ½Ð¸ÐµÐ¼: " << Time_For_Search_Binary_Golden_Ratio(&ArraySeq, stud_)[1] << " Ð½Ñ" << endl;
 				}
 				catch (ElementNotFoundException<Student> ex1) {
 					ex1.what();
@@ -449,7 +449,7 @@ int main() {
 					ex3.what();
 				}
 				try {
-					cout << "Âðåìÿ äëÿ áèíàðíîãî ïîèñêà ñ äåëåíèåì ÷èñëîì Ôèáîíà÷÷è: " << Time_For_Search_Binary_Fibonacci(&ArraySeq, stud_, fib_n)[1] << " íñ" << endl;
+					cout << "Ð’Ñ€ÐµÐ¼Ñ Ð´Ð»Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ° Ñ Ð´ÐµÐ»ÐµÐ½Ð¸ÐµÐ¼ Ñ‡Ð¸ÑÐ»Ð¾Ð¼ Ð¤Ð¸Ð±Ð¾Ð½Ð°Ñ‡Ñ‡Ð¸: " << Time_For_Search_Binary_Fibonacci(&ArraySeq, stud_, fib_n)[1] << " Ð½Ñ" << endl;
 				}
 				catch (ElementNotFoundException<Student> ex1) {
 					ex1.what();
@@ -461,7 +461,7 @@ int main() {
 					ex3.what();
 				}
 				try {
-					cout << "Âðåìÿ äëÿ áèíàðíîãî ïîèñêà ñ äåëåíèåì îòðåçêîì: " << Time_For_Search_Binary_Own_Pair(&ArraySeq, stud_, prop1, prop2)[1] << " íñ" << endl;
+					cout << "Ð’Ñ€ÐµÐ¼Ñ Ð´Ð»Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ð¾Ð³Ð¾ Ð¿Ð¾Ð¸ÑÐºÐ° Ñ Ð´ÐµÐ»ÐµÐ½Ð¸ÐµÐ¼ Ð¾Ñ‚Ñ€ÐµÐ·ÐºÐ¾Ð¼: " << Time_For_Search_Binary_Own_Pair(&ArraySeq, stud_, prop1, prop2)[1] << " Ð½Ñ" << endl;
 				}
 				catch (ElementNotFoundException<Student> ex1) {
 					ex1.what();
@@ -480,48 +480,48 @@ int main() {
 			while(f == 1) {
 				int act;
 				do {
-					cout << "Âûáåðèòå äåéñòâèå:  \n1 - Äîáàâèòü ýëåìåíò\n2 - Óäàëèòü ýëåìåíò\n3 - Ïîëó÷åíèå ýëåìåíòà ïî êëþ÷ó\n4 - Ïðîâåðêà, ÷òî â òàáëèöå óæå åñòü ýëåìåíò ñ çàäàííûì êëþ÷îì\n5 - Âûéòè\nÎòâåò: ";
+					cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:  \n1 - Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚\n2 - Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚\n3 - ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ\n4 - ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ°, Ñ‡Ñ‚Ð¾ Ð² Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ðµ ÑƒÐ¶Ðµ ÐµÑÑ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ñ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ð¼ ÐºÐ»ÑŽÑ‡Ð¾Ð¼\n5 - Ð’Ñ‹Ð¹Ñ‚Ð¸\nÐžÑ‚Ð²ÐµÑ‚: ";
 					while (!(cin >> act)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (act != 1 && act != 2 && act != 3 && act != 4 && act != 5)
-						cout << "ÎØÈÁÊÀ: Ââåäèòå êîððåêòíîå çíà÷åíèå(îò 1 äî 5):  ";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ(Ð¾Ñ‚ 1 Ð´Ð¾ 5):  ";
 				} while (act != 1 && act != 2 && act != 3 && act != 4 && act != 5);
 				
 				if (act == 1) {
 					
 					int act1;
 					do {
-						cout << "Âûáåðèòå äåéñòâèå:  \n1 - Çàïîëíèòü ñëó÷àéíûìè ýëåìåíòàìè\n2 - Ââåñòè âðó÷íóþ\nÎòâåò:  ";
+						cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:  \n1 - Ð—Ð°Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ñ‹Ð¼Ð¸ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°Ð¼Ð¸\n2 - Ð’Ð²ÐµÑÑ‚Ð¸ Ð²Ñ€ÑƒÑ‡Ð½ÑƒÑŽ\nÐžÑ‚Ð²ÐµÑ‚:  ";
 						while (!(cin >> act1)) {
 							cin.clear();
-							cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+							cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 							while (cin.get() != '\n') continue;
 						}
 						if (act1 != 1 && act1 != 2 && act1 != 3 && act1 != 4 && act1 != 5)
-							cout << "ÎØÈÁÊÀ: Ââåäèòå êîððåêòíîå çíà÷åíèå:  ";
+							cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ:  ";
 					} while (act1 != 1 && act1 != 2 && act1 != 3 && act1 != 4 && act1 != 5);
 
 					if (act1 == 1) {
 						int amount_of_elem;
 						do {
-							cout << "Ââåäèòå êîëè÷åñòâî ñòóäåíòîâ â ïîñëåäîâàòåëüíîñòè: ";
+							cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: ";
 							while (!(cin >> amount_of_elem)) {
 								cin.clear();
-								cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+								cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 								while (cin.get() != '\n') continue;
 							}
 							if (amount_of_elem < 1)
-								cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+								cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 						} while (amount_of_elem < 1);
 
 						ArraySequence<Student> Stud_Arr;
 						Rand_Stud_Seq_Gen(&Stud_Arr, amount_of_elem);
 						for (int i = 0; i < amount_of_elem; i++)
 							dict.Add(Stud_Arr.Get(i).GetName(), Stud_Arr.Get(i));
-						cout << "Ïîëó÷èâøàÿñÿ Õåø-òàáëèöà:" << endl;
+						cout << "ÐŸÐ¾Ð»ÑƒÑ‡Ð¸Ð²ÑˆÐ°ÑÑÑ Ð¥ÐµÑˆ-Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð°:" << endl;
 						dict.printAll();
 						cout << "Capacity: " << dict.GetCapacity() << endl;
 						cout << "Count: " << dict.GetCount() << endl;
@@ -530,57 +530,57 @@ int main() {
 					else if (act1 == 2) {
 						int amount_of_elem;
 						do {
-							cout << "Ââåäèòå êîëè÷åñòâî ñòóäåíòîâ â ïîñëåäîâàòåëüíîñòè: ";
+							cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: ";
 							while (!(cin >> amount_of_elem)) {
 								cin.clear();
-								cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+								cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 								while (cin.get() != '\n') continue;
 							}
 							if (amount_of_elem < 1)
-								cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+								cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 						} while (amount_of_elem < 1);
 						while (amount_of_elem < 1) {
-							cout << "Ââåäèòå êîððåêòíîå çíà÷åíèå:  ";
+							cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ:  ";
 							cin >> amount_of_elem;
 						}
 						string name;
 						int d, m, g;
-						cout << "Ââîäèòå ôàìèëèè è äàòû ðîæäåíèÿ" << endl;
+						cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ð¸ Ð¸ Ð´Ð°Ñ‚Ñ‹ Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ" << endl;
 						for (int i = 0; i < amount_of_elem; i++) {
-							cout << "Còóäåíò " << i << ":" << endl;
-							cout << "Èìÿ:  ";
+							cout << "CÑ‚ÑƒÐ´ÐµÐ½Ñ‚ " << i << ":" << endl;
+							cout << "Ð˜Ð¼Ñ:  ";
 							string name; cin >> name;
-							cout << "Äàòà ðîæäåíèÿ (÷åðåç ïðîáåë):\n";
+							cout << "Ð”Ð°Ñ‚Ð° Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ (Ñ‡ÐµÑ€ÐµÐ· Ð¿Ñ€Ð¾Ð±ÐµÐ»):\n";
 							int d; int m; int g;
 							do {
-								cout << "Ââåäèòå äåíü: ";
+								cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ: ";
 								while (!(cin >> d)) {
 									cin.clear();
-									cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+									cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 									while (cin.get() != '\n') continue;
 								}
 								if (d > 31 || d < 1)
-									cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+									cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 							} while (d > 31 || d < 1);
 							do {
-								cout << "Ââåäèòå ìåñÿö: ";
+								cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼ÐµÑÑÑ†: ";
 								while (!(cin >> m)) {
 									cin.clear();
-									cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+									cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 									while (cin.get() != '\n') continue;
 								}
 								if (m > 12 || m < 1)
-									cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+									cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 							} while (m > 12 || m < 1);
 							do {
-								cout << "Ââåäèòå ãîä: ";
+								cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´: ";
 								while (!(cin >> g)) {
 									cin.clear();
-									cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+									cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 									while (cin.get() != '\n') continue;
 								}
 								if (g > 2018 || g < 1900)
-									cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+									cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 							} while (g > 2018 || g < 1900);
 
 							Student stud = Student(name, d, m, g);
@@ -594,11 +594,11 @@ int main() {
 
 				else if (act == 2) {
 					if (dict.GetCount() == 0) {
-						cout << "Ñíà÷àëà äîáàâüòå ýëåìåíò â ïîñëåäîâàòåëüíîñòü\n";
+						cout << "Ð¡Ð½Ð°Ñ‡Ð°Ð»Ð° Ð´Ð¾Ð±Ð°Ð²ÑŒÑ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ\n";
 						act = 1;
 					}
 					else {
-						cout << "Ââåäèòå êëþ÷ ýëåìåíòà, êîòîðûé õîòèòå óäàëèòü:  ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ:  ";
 						string k;
 						cin >> k;
 
@@ -608,7 +608,7 @@ int main() {
 						catch (KeyIsNotExistException<string> ex1) {
 							ex1.what();
 						}
-						cout << "Ïîëó÷èâøàÿñÿ Õåø-òàáëèöà:" << endl;
+						cout << "ÐŸÐ¾Ð»ÑƒÑ‡Ð¸Ð²ÑˆÐ°ÑÑÑ Ð¥ÐµÑˆ-Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ð°:" << endl;
 						dict.printAll();
 						cout << "Capacity: " << dict.GetCapacity() << endl;
 						cout << "Count: " << dict.GetCount() << endl;
@@ -617,11 +617,11 @@ int main() {
 				}
 				else if (act == 3) {
 					if (dict.GetCount() == 0) {
-						cout << "Ñíà÷àëà äîáàâüòå ýëåìåíò â ïîñëåäîâàòåëüíîñòü\n";
+						cout << "Ð¡Ð½Ð°Ñ‡Ð°Ð»Ð° Ð´Ð¾Ð±Ð°Ð²ÑŒÑ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ\n";
 						act = 1;
 					}
 					else {
-						cout << "Ââåäèòå êëþ÷ äëÿ ïîëó÷åíèÿ ýëåìåíòà ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡ Ð´Ð»Ñ Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ñ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° ";
 						string key;
 						cin >> key;
 
@@ -637,11 +637,11 @@ int main() {
 				}
 				else if (act == 4) {
 					if (dict.GetCount() == 0) {
-						cout << "Ñíà÷àëà äîáàâüòå ýëåìåíò â ïîñëåäîâàòåëüíîñòü\n";
+						cout << "Ð¡Ð½Ð°Ñ‡Ð°Ð»Ð° Ð´Ð¾Ð±Ð°Ð²ÑŒÑ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ\n";
 						act = 1;
 					}
 					else {
-						cout << "Ââåäèòå êëþ÷ äëÿ ïîèñêà ýëåìåíòà ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡ Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° ";
 						string key;
 						cin >> key;
 
@@ -670,94 +670,94 @@ int main() {
 			int t, f = 1;
 
 			do {
-				cout << "Ââåäèòå t - ìèíèìàëüíóþ ñòåïåíü B-äåðåâà: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ t - Ð¼Ð¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½ÑƒÑŽ ÑÑ‚ÐµÐ¿ÐµÐ½ÑŒ B-Ð´ÐµÑ€ÐµÐ²Ð°: ";
 				while (!(cin >> t)) {
 					cin.clear();
-					cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+					cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 					while (cin.get() != '\n') continue;
 				}
 				if (t > 10 || t < 1)
-					cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+					cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 			} while (t > 10 || t < 1);
 			
 			BTreeBuilder<Student> builder = BTreeBuilder<Student>(t);
 
 			int atr;
 			do {
-				cout << "Âûáåðèòå àòðèáóò ïîèñêà:\n1 - èìÿ, 2 - äàòà ðîæäåíèÿ, 3 - îáà àòðèáóòà ";
+				cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚ Ð¿Ð¾Ð¸ÑÐºÐ°:\n1 - Ð¸Ð¼Ñ, 2 - Ð´Ð°Ñ‚Ð° Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ, 3 - Ð¾Ð±Ð° Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚Ð° ";
 				while (!(cin >> atr)) {
 					cin.clear();
-					cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+					cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 					while (cin.get() != '\n') continue;
 				}
 				if (atr != 1 && atr != 2 && atr != 3 && atr != 4)
-					cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+					cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 			} while (atr != 1 && atr != 2 && atr != 3 && atr != 4);
 
-			cout << "Äîáàâüòå ýëåìåíòû äëÿ ïåðâè÷íîãî ïîñòðîåíèÿ B-äåðåâà" << endl;
+			cout << "Ð”Ð¾Ð±Ð°Ð²ÑŒÑ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð´Ð»Ñ Ð¿ÐµÑ€Ð²Ð¸Ñ‡Ð½Ð¾Ð³Ð¾ Ð¿Ð¾ÑÑ‚Ñ€Ð¾ÐµÐ½Ð¸Ñ B-Ð´ÐµÑ€ÐµÐ²Ð°" << endl;
 
 			int vvod;
 			do {
-				cout << "Âûáåðåòå ðåæèì ðàáîòû:\n1 - ðó÷íîé ââîä\n2 - àâòîìàòè÷åñêèé ââîä\nÎòâåò:    ";
+				cout << "Ð’Ñ‹Ð±ÐµÑ€ÐµÑ‚Ðµ Ñ€ÐµÐ¶Ð¸Ð¼ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹:\n1 - Ñ€ÑƒÑ‡Ð½Ð¾Ð¹ Ð²Ð²Ð¾Ð´\n2 - Ð°Ð²Ñ‚Ð¾Ð¼Ð°Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ð²Ð²Ð¾Ð´\nÐžÑ‚Ð²ÐµÑ‚:    ";
 				while (!(cin >> vvod)) {
 					cin.clear();
-					cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+					cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 					while (cin.get() != '\n') continue;
 				}
 				if (vvod != 1 && vvod != 2)
-					cout << "ÎØÈÁÊÀ: Ââåäèòå êîððåêòíîå çíà÷åíèå(1 èëè 2): ";
+					cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ(1 Ð¸Ð»Ð¸ 2): ";
 			} while (vvod != 1 && vvod != 2);
 
 			if (vvod == 1) {
 
 				int amount_of_el;
 				do {
-					cout << "Ââåäèòå êîëè÷åñòâî ñòóäåíòîâ â ïîñëåäîâàòåëüíîñòè: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: ";
 					while (!(cin >> amount_of_el)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (amount_of_el < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (amount_of_el < 1);
 
-				cout << "Ââîäèòå ôàìèëèè è äàòû ðîæäåíèÿ" << endl;
+				cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ð¸ Ð¸ Ð´Ð°Ñ‚Ñ‹ Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ" << endl;
 				for (int i = 0; i < amount_of_el; i++) {
-					cout << "Còóäåíò " << i << ":" << endl;
-					cout << "Èìÿ:  ";
+					cout << "CÑ‚ÑƒÐ´ÐµÐ½Ñ‚ " << i << ":" << endl;
+					cout << "Ð˜Ð¼Ñ:  ";
 					string name; cin >> name;
-					cout << "Äàòà ðîæäåíèÿ (÷åðåç ïðîáåë):\n";
+					cout << "Ð”Ð°Ñ‚Ð° Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ (Ñ‡ÐµÑ€ÐµÐ· Ð¿Ñ€Ð¾Ð±ÐµÐ»):\n";
 					int d; int m; int g;
 					do {
-						cout << "Ââåäèòå äåíü: ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ: ";
 						while (!(cin >> d)) {
 							cin.clear();
-							cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+							cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 							while (cin.get() != '\n') continue;
 						}
 						if (d > 31 || d < 1)
-							cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+							cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 					} while (d > 31 || d < 1);
 					do {
-						cout << "Ââåäèòå ìåñÿö: ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼ÐµÑÑÑ†: ";
 						while (!(cin >> m)) {
 							cin.clear();
-							cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+							cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 							while (cin.get() != '\n') continue;
 						}
 						if (m > 12 || m < 1)
-							cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+							cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 					} while (m > 12 || m < 1);
 					do {
-						cout << "Ââåäèòå ãîä: ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´: ";
 						while (!(cin >> g)) {
 							cin.clear();
-							cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+							cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 							while (cin.get() != '\n') continue;
 						}
 						if (g > 2018 || g < 1900)
-							cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+							cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 					} while (g > 2018 || g < 1900);
 
 					Student stud = Student(name, d, m, g);
@@ -768,14 +768,14 @@ int main() {
 			else if (vvod == 2) {
 				int amount_of_el;
 				do {
-					cout << "Ââåäèòå êîëè÷åñòâî ñòóäåíòîâ â ïîñëåäîâàòåëüíîñòè: ";
+					cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: ";
 					while (!(cin >> amount_of_el)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (amount_of_el < 1)
-						cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 				} while (amount_of_el < 1);
 				Rand_Stud_Seq_Gen(&Stud_Arr, amount_of_el);
 			}
@@ -791,7 +791,7 @@ int main() {
 			
 			BTree<Student> btree = builder.build(&Stud_Arr, Stud_Arr.GetLength());
 
-			cout << "Ïîëó÷èâøååñÿ B-äåðåâî\n";
+			cout << "ÐŸÐ¾Ð»ÑƒÑ‡Ð¸Ð²ÑˆÐµÐµÑÑ B-Ð´ÐµÑ€ÐµÐ²Ð¾\n";
 			btree.traverse();
 
 			while (f == 1) {
@@ -799,79 +799,79 @@ int main() {
 
 				int act;
 				do {
-					cout << "Âûáåðèòå äåéñòâèå:  \n1 - Äîáàâèòü ýëåìåíò\n2 - Ïîèñê ýëåìåíòà\n3 - Âûéòè\nÎòâåò: ";
+					cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:  \n1 - Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚\n2 - ÐŸÐ¾Ð¸ÑÐº ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°\n3 - Ð’Ñ‹Ð¹Ñ‚Ð¸\nÐžÑ‚Ð²ÐµÑ‚: ";
 					while (!(cin >> act)) {
 						cin.clear();
-						cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+						cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 						while (cin.get() != '\n') continue;
 					}
 					if (act != 1 && act != 2 && act != 3)
-						cout << "ÎØÈÁÊÀ: Ââåäèòå êîððåêòíîå çíà÷åíèå(îò 1 äî 5):  ";
+						cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ(Ð¾Ñ‚ 1 Ð´Ð¾ 5):  ";
 				} while (act != 1 && act != 2 && act != 3);
 
 				if (act == 1) {
 					int vvod;
 					do {
-						cout << "Âûáåðåòå ðåæèì ðàáîòû:\n1 - ðó÷íîé ââîä\n2 - àâòîìàòè÷åñêèé ââîä\nÎòâåò:    ";
+						cout << "Ð’Ñ‹Ð±ÐµÑ€ÐµÑ‚Ðµ Ñ€ÐµÐ¶Ð¸Ð¼ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹:\n1 - Ñ€ÑƒÑ‡Ð½Ð¾Ð¹ Ð²Ð²Ð¾Ð´\n2 - Ð°Ð²Ñ‚Ð¾Ð¼Ð°Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ð²Ð²Ð¾Ð´\nÐžÑ‚Ð²ÐµÑ‚:    ";
 						while (!(cin >> vvod)) {
 							cin.clear();
-							cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+							cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 							while (cin.get() != '\n') continue;
 						}
 						if (vvod != 1 && vvod != 2)
-							cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+							cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 					} while (vvod != 1 && vvod != 2);
 
 					if (vvod == 1) {
 
 						int amount_of_el;
 						do {
-							cout << "Ââåäèòå êîëè÷åñòâî ñòóäåíòîâ â ïîñëåäîâàòåëüíîñòè: ";
+							cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: ";
 							while (!(cin >> amount_of_el)) {
 								cin.clear();
-								cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+								cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 								while (cin.get() != '\n') continue;
 							}
 							if (amount_of_el < 1)
-								cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+								cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 						} while (amount_of_el < 1);
 
-						cout << "Ââîäèòå ôàìèëèè è äàòû ðîæäåíèÿ" << endl;
+						cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ð¸ Ð¸ Ð´Ð°Ñ‚Ñ‹ Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ" << endl;
 						for (int i = 0; i < amount_of_el; i++) {
-							cout << "Còóäåíò " << i << ":" << endl;
-							cout << "Èìÿ:  ";
+							cout << "CÑ‚ÑƒÐ´ÐµÐ½Ñ‚ " << i << ":" << endl;
+							cout << "Ð˜Ð¼Ñ:  ";
 							string name; cin >> name;
-							cout << "Äàòà ðîæäåíèÿ (÷åðåç ïðîáåë):\n";
+							cout << "Ð”Ð°Ñ‚Ð° Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ (Ñ‡ÐµÑ€ÐµÐ· Ð¿Ñ€Ð¾Ð±ÐµÐ»):\n";
 							int d; int m; int g;
 							do {
-								cout << "Ââåäèòå äåíü: ";
+								cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ: ";
 								while (!(cin >> d)) {
 									cin.clear();
-									cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+									cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 									while (cin.get() != '\n') continue;
 								}
 								if (d > 31 || d < 1)
-									cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+									cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 							} while (d > 31 || d < 1);
 							do {
-								cout << "Ââåäèòå ìåñÿö: ";
+								cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼ÐµÑÑÑ†: ";
 								while (!(cin >> m)) {
 									cin.clear();
-									cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+									cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 									while (cin.get() != '\n') continue;
 								}
 								if (m > 12 || m < 1)
-									cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+									cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 							} while (m > 12 || m < 1);
 							do {
-								cout << "Ââåäèòå ãîä: ";
+								cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´: ";
 								while (!(cin >> g)) {
 									cin.clear();
-									cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+									cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 									while (cin.get() != '\n') continue;
 								}
 								if (g > 2018 || g < 1900)
-									cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+									cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 							} while (g > 2018 || g < 1900);
 
 							Student stud = Student(name, d, m, g);
@@ -882,14 +882,14 @@ int main() {
 					else if (vvod == 2) {
 						int amount_of_el;
 						do {
-							cout << "Ââåäèòå êîëè÷åñòâî ñòóäåíòîâ â ïîñëåäîâàòåëüíîñòè: ";
+							cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚Ð¸: ";
 							while (!(cin >> amount_of_el)) {
 								cin.clear();
-								cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+								cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 								while (cin.get() != '\n') continue;
 							}
 							if (amount_of_el < 1)
-								cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+								cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 						} while (amount_of_el < 1);
 						Rand_Stud_Seq_Gen(&Stud_Arr1, amount_of_el);
 					}
@@ -906,45 +906,45 @@ int main() {
 					for (int j = 0; j < Stud_Arr1.GetLength(); j++)
 						btree.insert(Stud_Arr1.Get(j));
 
-					cout << "Ïîëó÷èâøååñÿ B-äåðåâî\n";
+					cout << "ÐŸÐ¾Ð»ÑƒÑ‡Ð¸Ð²ÑˆÐµÐµÑÑ B-Ð´ÐµÑ€ÐµÐ²Ð¾\n";
 					btree.traverse();
 				}
 				else if (act == 2) {
-					cout << "\nÂâåäèòå ñòóäåíòà äëÿ ïîèñêà â B-äåðåâå " << endl;
-					cout << "Còóäåíò: " << endl;
-					cout << "Èìÿ:  ";
+					cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð° Ð´Ð»Ñ Ð¿Ð¾Ð¸ÑÐºÐ° Ð² B-Ð´ÐµÑ€ÐµÐ²Ðµ " << endl;
+					cout << "CÑ‚ÑƒÐ´ÐµÐ½Ñ‚: " << endl;
+					cout << "Ð˜Ð¼Ñ:  ";
 					string name; cin >> name;
-					cout << "Äàòà ðîæäåíèÿ (÷åðåç ïðîáåë):\n";
+					cout << "Ð”Ð°Ñ‚Ð° Ñ€Ð¾Ð¶Ð´ÐµÐ½Ð¸Ñ (Ñ‡ÐµÑ€ÐµÐ· Ð¿Ñ€Ð¾Ð±ÐµÐ»):\n";
 					int d; int m; int g;
 					do {
-						cout << "Ââåäèòå äåíü: ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´ÐµÐ½ÑŒ: ";
 						while (!(cin >> d)) {
 							cin.clear();
-							cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+							cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 							while (cin.get() != '\n') continue;
 						}
 						if (d > 31 || d < 1)
-							cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+							cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 					} while (d > 31 || d < 1);
 					do {
-						cout << "Ââåäèòå ìåñÿö: ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼ÐµÑÑÑ†: ";
 						while (!(cin >> m)) {
 							cin.clear();
-							cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+							cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 							while (cin.get() != '\n') continue;
 						}
 						if (m > 12 || m < 1)
-							cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+							cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 					} while (m > 12 || m < 1);
 					do {
-						cout << "Ââåäèòå ãîä: ";
+						cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´: ";
 						while (!(cin >> g)) {
 							cin.clear();
-							cout << "ERROR: ââåäèòå ÷èñëî--> " << endl;
+							cout << "ERROR: Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾--> " << endl;
 							while (cin.get() != '\n') continue;
 						}
 						if (g > 2018 || g < 1900)
-							cout << "ÎØÈÁÊÀ: ïîâòîðèòå ââîä->";
+							cout << "ÐžÐ¨Ð˜Ð‘ÐšÐ: Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´->";
 					} while (g > 2018 || g < 1900);
 
 					Student stud = Student(name, d, m, g);
@@ -957,14 +957,14 @@ int main() {
 
 					auto begin = chrono::high_resolution_clock::now();
 					try {
-						cout << "Ðåçóëüòàò: " << btree.search(stud).index;
+						cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚: " << btree.search(stud).index;
 					}
 					catch (ElementNotFoundException<Student> ex) {
 						ex.what();
 					}
 					auto end = chrono::high_resolution_clock::now();
 					auto res = chrono::duration_cast<chrono::nanoseconds>(end - begin).count();
-					cout << " Âðåìÿ: " << res << " íñ" << endl;
+					cout << " Ð’Ñ€ÐµÐ¼Ñ: " << res << " Ð½Ñ" << endl;
 				}
 				else if (act == 3)
 					f = -1;

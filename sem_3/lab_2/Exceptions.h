@@ -55,14 +55,14 @@ public:
 class EmptySequenceException : public exception {
 public:
 	void what() {
-		cout << "ERROR. Ïîñëåäîâàòåëüíîñòü ïóñòà" << endl;
+		cout << "ERROR. ÐŸÐ¾ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ Ð¿ÑƒÑÑ‚Ð°" << endl;
 	}
 };
 
 class NoMeaningFibException : public std::exception {
 public:
 	void what() {
-		cout << "ERROR. Áåññìûñëåííàÿ ïðîïîðöèÿ äåëåíèÿ" << endl;
+		cout << "ERROR. Ð‘ÐµÑÑÐ¼Ñ‹ÑÐ»ÐµÐ½Ð½Ð°Ñ Ð¿Ñ€Ð¾Ð¿Ð¾Ñ€Ñ†Ð¸Ñ Ð´ÐµÐ»ÐµÐ½Ð¸Ñ" << endl;
 	}
 };
 

@@ -13,7 +13,7 @@
 
 
 void Test_Dictionary() {
-	cout << "Çàïóñê àâòîìàòè÷åñêîãî òåñòèğîâàíèÿ ñëîâàğÿ (hash-òàáëèöû).....";
+	cout << "Ğ—Ğ°Ğ¿ÑƒÑĞº Ğ°Ğ²Ñ‚Ğ¾Ğ¼Ğ°Ñ‚Ğ¸Ñ‡ĞµÑĞºĞ¾Ğ³Ğ¾ Ñ‚ĞµÑÑ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ ÑĞ»Ğ¾Ğ²Ğ°Ñ€Ñ (hash-Ñ‚Ğ°Ğ±Ğ»Ğ¸Ñ†Ñ‹).....";
 
 	bool Remove = false;
 	IDictionary<string, int> test_dict;
@@ -50,11 +50,11 @@ void Test_Dictionary() {
 	}
 
 	if (Remove)
-		cout << "Àâòîìàòè÷åñêîå òåñòèğîâàíèå ïğîéäåíî áåç îøèáîê" << endl;
+		cout << "ĞĞ²Ñ‚Ğ¾Ğ¼Ğ°Ñ‚Ğ¸Ñ‡ĞµÑĞºĞ¾Ğµ Ñ‚ĞµÑÑ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ¿Ñ€Ğ¾Ğ¹Ğ´ĞµĞ½Ğ¾ Ğ±ĞµĞ· Ğ¾ÑˆĞ¸Ğ±Ğ¾Ğº" << endl;
 }
 
 void Test_BTree() {
-	cout << "Çàïóñê òåñòèğîâàíèÿ B-äåğåâà.....";
+	cout << "Ğ—Ğ°Ğ¿ÑƒÑĞº Ñ‚ĞµÑÑ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ B-Ğ´ĞµÑ€ĞµĞ²Ğ°.....";
 
 	ArraySequence<Student> test_arr;
 	Student student1 = Student("Maksim", 19, 10, 2000); student1.set_flag(2); test_arr.Append(student1);
@@ -96,11 +96,11 @@ void Test_BTree() {
 	assert(btree.search(student9).index == 0);
 	assert(btree.search(student10).index == 1);
 
-	cout << "Àâòîìàòè÷åñêîå òåñòèğîâàíèå ïğîéäåíî áåç îøèáîê" << endl;
+	cout << "ĞĞ²Ñ‚Ğ¾Ğ¼Ğ°Ñ‚Ğ¸Ñ‡ĞµÑĞºĞ¾Ğµ Ñ‚ĞµÑÑ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ¿Ñ€Ğ¾Ğ¹Ğ´ĞµĞ½Ğ¾ Ğ±ĞµĞ· Ğ¾ÑˆĞ¸Ğ±Ğ¾Ğº" << endl;
 }
 
 void Test_Binary_Search() {
-	cout << "Çàïóñê òåñòèğîâàíèÿ áèíàğíîãî ïîèñêà.....";
+	cout << "Ğ—Ğ°Ğ¿ÑƒÑĞº Ñ‚ĞµÑÑ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ñ Ğ±Ğ¸Ğ½Ğ°Ñ€Ğ½Ğ¾Ğ³Ğ¾ Ğ¿Ğ¾Ğ¸ÑĞºĞ°.....";
 
 	ArraySequence<Student> test_arr;
 	Student student1 = Student("Maksim", 19, 10, 2000); student1.set_flag(1); test_arr.Append(student1);
@@ -205,7 +205,7 @@ void Test_Binary_Search() {
 	assert(test_arr.Get(Search_Binary_Golden_Ratio(&test_arr, student9)) == student9);
 	assert(test_arr.Get(Search_Binary_Golden_Ratio(&test_arr, student10)) == student10);
 
-	cout << "Àâòîìàòè÷åñêîå òåñòèğîâàíèå ïğîéäåíî áåç îøèáîê" << endl;
+	cout << "ĞĞ²Ñ‚Ğ¾Ğ¼Ğ°Ñ‚Ğ¸Ñ‡ĞµÑĞºĞ¾Ğµ Ñ‚ĞµÑÑ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ Ğ¿Ñ€Ğ¾Ğ¹Ğ´ĞµĞ½Ğ¾ Ğ±ĞµĞ· Ğ¾ÑˆĞ¸Ğ±Ğ¾Ğº" << endl;
 }
 
 #endif /* TEST_H */

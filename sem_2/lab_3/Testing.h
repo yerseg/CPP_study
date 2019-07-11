@@ -27,8 +27,8 @@ void map_test() {
 	bool *check = new bool;
 	*check = 1;
 	mytree->CompareTrees(mytree->GetRoot(), after->GetRoot(), check);
-	if (*check) cout << "Òåñò map: âåðíî" << endl;
-	else cout << "Òåñò map: íå âåðíî" << endl;
+	if (*check) cout << "Ð¢ÐµÑÑ‚ map: Ð²ÐµÑ€Ð½Ð¾" << endl;
+	else cout << "Ð¢ÐµÑÑ‚ map: Ð½Ðµ Ð²ÐµÑ€Ð½Ð¾" << endl;
 	delete mytree;
 }
 
@@ -43,8 +43,8 @@ void where_test() {
 	bool *check = new bool;
 	*check = 1;
 	mytree->CompareTrees(after->GetRoot(), truetree->GetRoot(), check);
-	if (*check) cout << "Òåñò where: âåðíî" << endl;
-	else cout << "Òåñò where: íå âåðíî" << endl;
+	if (*check) cout << "Ð¢ÐµÑÑ‚ where: Ð²ÐµÑ€Ð½Ð¾" << endl;
+	else cout << "Ð¢ÐµÑÑ‚ where: Ð½Ðµ Ð²ÐµÑ€Ð½Ð¾" << endl;
 	delete mytree;
 	delete after;
 	delete truetree;
@@ -56,8 +56,8 @@ void merge_test() {
 	Tree<string> *mytree2 = new Tree<string>;
 	mytree2 = test_tree();
 	mytree->MergeTrees(mytree2);
-	if (mytree2->GetKids() == 11) cout << "Ñëèÿíèå: âåðíî" << endl;
-	else cout << "Ñëèÿíèå: íå âåðíî" << endl;
+	if (mytree2->GetKids() == 11) cout << "Ð¡Ð»Ð¸ÑÐ½Ð¸Ðµ: Ð²ÐµÑ€Ð½Ð¾" << endl;
+	else cout << "Ð¡Ð»Ð¸ÑÐ½Ð¸Ðµ: Ð½Ðµ Ð²ÐµÑ€Ð½Ð¾" << endl;
 	delete mytree;
 	delete mytree2;
 }
@@ -67,16 +67,16 @@ void subtree_test() {
 	mytree = test_tree();
 	Tree<string> *smalltree = new Tree<string>;
 	mytree->SubtreeExtraction("bb", smalltree);
-	if (smalltree->GetKids() == 2) cout << "Èçâëå÷åíèå ïîääåðåâà: âåðíî" << endl;
-	else cout << "Èçâëå÷åíèå ïîääåðåâà: íå âåðíî" << endl;
+	if (smalltree->GetKids() == 2) cout << "Ð˜Ð·Ð²Ð»ÐµÑ‡ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð´Ð´ÐµÑ€ÐµÐ²Ð°: Ð²ÐµÑ€Ð½Ð¾" << endl;
+	else cout << "Ð˜Ð·Ð²Ð»ÐµÑ‡ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð´Ð´ÐµÑ€ÐµÐ²Ð°: Ð½Ðµ Ð²ÐµÑ€Ð½Ð¾" << endl;
 	delete mytree;
 }
 
 void el_contain_test() {
 	Tree<string> *mytree = new Tree<string>;
 	mytree = test_tree();
-	if (mytree->IfElementContain("aa")) cout << "Ïðîâåðêà ýëåìåíòà íà âõîæäåíèå: âåðíî" << endl;
-	else cout << "Ïðîâåðêà ýëåìåíòà íà âõîæäåíèå: íå âåðíî" << endl;
+	if (mytree->IfElementContain("aa")) cout << "ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½Ð° Ð²Ñ…Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ: Ð²ÐµÑ€Ð½Ð¾" << endl;
+	else cout << "ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð½Ð° Ð²Ñ…Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ: Ð½Ðµ Ð²ÐµÑ€Ð½Ð¾" << endl;
 	delete mytree;
 }
 
@@ -86,8 +86,8 @@ void if_tree_contain_test() {
 	Tree<string> *smalltree = new Tree<string>;
 	smalltree->insert("aa");
 	smalltree->insert("bb");
-	if (mytree->IfTreeContain(smalltree)) cout << "Ïðîâåðêà ïîääåðåâà íà âõîæäåíèå: âåðíî" << endl;
-	else cout << "Ïðîâåðêà ïîääåðåâà íà âõîæäåíèå: íå âåðíî" << endl;
+	if (mytree->IfTreeContain(smalltree)) cout << "ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð¿Ð¾Ð´Ð´ÐµÑ€ÐµÐ²Ð° Ð½Ð° Ð²Ñ…Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ: Ð²ÐµÑ€Ð½Ð¾" << endl;
+	else cout << "ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð¿Ð¾Ð´Ð´ÐµÑ€ÐµÐ²Ð° Ð½Ð° Ð²Ñ…Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ: Ð½Ðµ Ð²ÐµÑ€Ð½Ð¾" << endl;
 	delete mytree;
 	delete smalltree;
 }

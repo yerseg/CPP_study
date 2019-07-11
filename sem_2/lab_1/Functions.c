@@ -5,38 +5,38 @@
 #define TRUE 1
 #define FALSE 0
 
-//Основные функции
+//РћСЃРЅРѕРІРЅС‹Рµ С„СѓРЅРєС†РёРё
 void* array_alloc() {		
 	return(void*)malloc(sizeof(Array));
-}	//Выделение памяти по Array
+}	//Р’С‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё РїРѕ Array
 
 void* array_set(Array *p, int count) {
 	p->elements_count = count;
 	p->memory_ptr = (void**)malloc(count*(sizeof(void*)));
 	return p;
-} //Задание количества элеметов Array и выделение памяти под массив указателей 
+} //Р—Р°РґР°РЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° СЌР»РµРјРµС‚РѕРІ Array Рё РІС‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё РїРѕРґ РјР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№ 
 
 void* lect_alloc() {
 	return(void*)malloc(sizeof(Lecturer));
-} //Выделение памяти под преподавателя
+} //Р’С‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё РїРѕРґ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ
 
 void* stud_alloc() {
 	return(void*)malloc(sizeof(Student));
-} //Выделение памяти под студента
+} //Р’С‹РґРµР»РµРЅРёРµ РїР°РјСЏС‚Рё РїРѕРґ СЃС‚СѓРґРµРЅС‚Р°
 
-void get_lect(Array* Lect_Arr) {  //Заполнение массива преподов и отправление его в Array
+void get_lect(Array* Lect_Arr) {  //Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР° РїСЂРµРїРѕРґРѕРІ Рё РѕС‚РїСЂР°РІР»РµРЅРёРµ РµРіРѕ РІ Array
 	Lecturer* lect;
 	for (int i = 0; i < Lect_Arr->elements_count; i++) {
 		lect = (Lecturer*)lect_alloc();
 		int k = 0, l = 0, s = 0;
 		char c;
 
-		//Заполнение полей
+		//Р—Р°РїРѕР»РЅРµРЅРёРµ РїРѕР»РµР№
 
 		lect->firstName = (char*)malloc(100 * sizeof(char));
 		lect->middleName = (char*)malloc(100 * sizeof(char));
 		lect->lastName = (char*)malloc(100 * sizeof(char));
-		printf("Введите ФИО преподавателя с пробелами не более 100 символов и нажмите Enter->\n");
+		printf("Р’РІРµРґРёС‚Рµ Р¤РРћ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ СЃ РїСЂРѕР±РµР»Р°РјРё РЅРµ Р±РѕР»РµРµ 100 СЃРёРјРІРѕР»РѕРІ Рё РЅР°Р¶РјРёС‚Рµ Enter->\n");
 		c = getchar();
 		while (((c = getchar()) != ' ') && (k != 100)) {
 			lect->lastName[l] = c;
@@ -64,54 +64,54 @@ void get_lect(Array* Lect_Arr) {  //Заполнение массива преподов и отправление ег
 		lect->middleName = (char*)realloc(lect->middleName, (k+1)*sizeof(char)); 
 		lect->middleName[l] = '\0';
 
-		printf("Введите серию паспорта в формате XXXX->\n");
+		printf("Р’РІРµРґРёС‚Рµ СЃРµСЂРёСЋ РїР°СЃРїРѕСЂС‚Р° РІ С„РѕСЂРјР°С‚Рµ XXXX->\n");
 		do {
 			scanf_s("%d", &s);
 			if (s <= 1000 || s >= 9999)
-				printf("Ошибка 005: повторите ввод->");
+				printf("РћС€РёР±РєР° 005: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 		} while (s <= 1000 || s >= 9999);
 		lect->id.series = s;
 
-		printf("Введите номер паспорта в формате XXXXXX->\n");
+		printf("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїР°СЃРїРѕСЂС‚Р° РІ С„РѕСЂРјР°С‚Рµ XXXXXX->\n");
 		do {
 			scanf_s("%d", &s);
 			if (s <= 100000 || s >= 999999)
-				printf("Ошибка 005: повторите ввод->");
+				printf("РћС€РёР±РєР° 005: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 		} while (s <= 100000 || s >= 999999);
 		lect->id.number = s;
 
-		printf("Введите год рождения преподавателя->\n");
+		printf("Р’РІРµРґРёС‚Рµ РіРѕРґ СЂРѕР¶РґРµРЅРёСЏ РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ->\n");
 		do {
 			scanf_s("%d", &s);
 			if (s <= 1900 || s >= 2018)
-				printf("Ошибка 005: повторите ввод->");
+				printf("РћС€РёР±РєР° 005: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 		} while (s <= 1900 || s >= 2018);
 		lect->yearofBirth = s;
 
-		printf("Введите ученое звание: 0 - ассистент, 1 - доцент, 2 - профессор->\n");
+		printf("Р’РІРµРґРёС‚Рµ СѓС‡РµРЅРѕРµ Р·РІР°РЅРёРµ: 0 - Р°СЃСЃРёСЃС‚РµРЅС‚, 1 - РґРѕС†РµРЅС‚, 2 - РїСЂРѕС„РµСЃСЃРѕСЂ->\n");
 		do {
 			scanf_s("%d", &s);
 			if (s != 0 && s != 1 && s != 2)
-				printf("Ошибка 005: повторите ввод->");
+				printf("РћС€РёР±РєР° 005: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 		} while (s != 0 && s != 2 && s != 1);
 		lect->grade = s;
 
-		Lect_Arr->memory_ptr[i] = (void*)lect; //отправили в ячейку динмассива
+		Lect_Arr->memory_ptr[i] = (void*)lect; //РѕС‚РїСЂР°РІРёР»Рё РІ СЏС‡РµР№РєСѓ РґРёРЅРјР°СЃСЃРёРІР°
 	}
 }
 
-void get_stud(Array* Stud_Arr) { //то же самое для студентов
+void get_stud(Array* Stud_Arr) { //С‚Рѕ Р¶Рµ СЃР°РјРѕРµ РґР»СЏ СЃС‚СѓРґРµРЅС‚РѕРІ
 	Student *stud;
 	for (int i = 0; i < Stud_Arr->elements_count; i++) {
 		stud = (Student*)stud_alloc();
 		int l = 0, k = 0, s = 0;
 		char c;
 
-		//Заполнение полей
+		//Р—Р°РїРѕР»РЅРµРЅРёРµ РїРѕР»РµР№
 		stud->firstName = (char*)malloc(100 * sizeof(char));
 		stud->middleName = (char*)malloc(100 * sizeof(char));
 		stud->lastName = (char*)malloc(100 * sizeof(char));
-		printf("Введите ФИО студента c пробелами не более 100 символов и нажмите Enter->\n");
+		printf("Р’РІРµРґРёС‚Рµ Р¤РРћ СЃС‚СѓРґРµРЅС‚Р° c РїСЂРѕР±РµР»Р°РјРё РЅРµ Р±РѕР»РµРµ 100 СЃРёРјРІРѕР»РѕРІ Рё РЅР°Р¶РјРёС‚Рµ Enter->\n");
 		c = getchar();
 		while (((c = getchar()) != ' ') && (k != 100)) {
 			*((stud->lastName) + l) = c;
@@ -139,34 +139,34 @@ void get_stud(Array* Stud_Arr) { //то же самое для студентов
 		stud->middleName = (char*)realloc(stud->middleName, (k+1)*sizeof(char)); 
 		stud->middleName[l] = '\0';
 
-		printf("Введите серию паспорта в формате XXXX->\n");
+		printf("Р’РІРµРґРёС‚Рµ СЃРµСЂРёСЋ РїР°СЃРїРѕСЂС‚Р° РІ С„РѕСЂРјР°С‚Рµ XXXX->\n");
 		do {
 			scanf_s("%d", &s);
 			if (s <= 1000 || s >= 9999)
-				printf("Ошибка 005: повторите ввод->");
+				printf("РћС€РёР±РєР° 005: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 		} while (s <= 1900 && s >= 2018);
 		stud->id.series = s;
-		printf("Введите номер паспорта в формате XXXXXX->\n");
+		printf("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїР°СЃРїРѕСЂС‚Р° РІ С„РѕСЂРјР°С‚Рµ XXXXXX->\n");
 		do {
 			scanf_s("%d", &s);
 			if (s <= 100000 || s >= 999999)
-				printf("Ошибка 005: повторите ввод->");
+				printf("РћС€РёР±РєР° 005: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 		} while (s <= 100000 || s >= 999999);
 		stud->id.number = s;
 
-		printf("Введите год рождения студента->\n");
+		printf("Р’РІРµРґРёС‚Рµ РіРѕРґ СЂРѕР¶РґРµРЅРёСЏ СЃС‚СѓРґРµРЅС‚Р°->\n");
 		do {
 			scanf_s("%d", &s);
 			if (s <= 1900 || s >= 2018)
-				printf("Ошибка 005: повторите ввод->");
+				printf("РћС€РёР±РєР° 005: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 		} while (s <= 1900 || s >= 2018);
 		stud->yearofBirth = s;
 
-		printf("Введите оценку студента по предмету информатика от 1 до 10 ->\n");
+		printf("Р’РІРµРґРёС‚Рµ РѕС†РµРЅРєСѓ СЃС‚СѓРґРµРЅС‚Р° РїРѕ РїСЂРµРґРјРµС‚Сѓ РёРЅС„РѕСЂРјР°С‚РёРєР° РѕС‚ 1 РґРѕ 10 ->\n");
 		do {
 			scanf_s("%d", &s);
 			if (s < 1 || s > 10)
-				printf("Ошибка 005: повторите ввод->");
+				printf("РћС€РёР±РєР° 005: РїРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ->");
 		} while (s < 1 || s > 10);
 		stud->rate = s;
 
@@ -177,74 +177,74 @@ void get_stud(Array* Stud_Arr) { //то же самое для студентов
 void out(Array* Lect_Arr, Array* Stud_Arr) {
 	int l;
 	char d;
-	printf("\nПРЕПОДАВАТЕЛИ\n\n");
+	printf("\nРџР Р•РџРћР”РђР’РђРўР•Р›Р\n\n");
 		for (int i = 0; i < Lect_Arr->elements_count; i++) {
 			Lecturer* lecturer = (Lecturer*)Lect_Arr->memory_ptr[i];
 			printf("\n");
-			printf("Фамилия: ");
+			printf("Р¤Р°РјРёР»РёСЏ: ");
 			for (l = 0; (lecturer->lastName[l]) != '\0'; l++) {
 				d = lecturer->lastName[l];
 				putchar(d);
 			} putchar('\n');
-			printf("Имя: ");
+			printf("РРјСЏ: ");
 			for (l = 0; (lecturer->firstName[l]) != '\0'; l++) {
 				d = lecturer->firstName[l];
 				putchar(d);
 			} putchar('\n');
-			printf("Отчество: ");
+			printf("РћС‚С‡РµСЃС‚РІРѕ: ");
 			for (l = 0; (lecturer->middleName[l]) != '\0'; l++) {
 				d = lecturer->middleName[l];
 				putchar(d);
 			} putchar('\n');
-			printf("Серия паспорта: ");
+			printf("РЎРµСЂРёСЏ РїР°СЃРїРѕСЂС‚Р°: ");
 			int q = lecturer->id.series;
 			printf("%d\n", q);
-			printf("Номер паспорта: ");
+			printf("РќРѕРјРµСЂ РїР°СЃРїРѕСЂС‚Р°: ");
 			q = lecturer->id.number;
 			printf("%d\n", q);
-			printf("Год рождения: ");
+			printf("Р“РѕРґ СЂРѕР¶РґРµРЅРёСЏ: ");
 			q = lecturer->yearofBirth;
 			printf("%d\n", q);
-			printf("Звание: ");
+			printf("Р—РІР°РЅРёРµ: ");
 			q = lecturer->grade;
 			if (q == 0)
-				printf("Ассистент\n");
+				printf("РђСЃСЃРёСЃС‚РµРЅС‚\n");
 			if (q == 1)
-				printf("Доцент\n");
+				printf("Р”РѕС†РµРЅС‚\n");
 			if (q == 2)
-				printf("Профессор\n");
+				printf("РџСЂРѕС„РµСЃСЃРѕСЂ\n");
 			//free(lecturer);
 		}
 
-	printf("\nСТУДЕНТЫ\n\n");
+	printf("\nРЎРўРЈР”Р•РќРўР«\n\n");
 		for (int i = 0; i < Stud_Arr->elements_count; i++) {
 			Student* student = Stud_Arr->memory_ptr[i];
 			printf("\n");
-			printf("Фамилия: ");
+			printf("Р¤Р°РјРёР»РёСЏ: ");
 			for (l = 0; (student->lastName[l]) != '\0'; l++) {
 				d = student->lastName[l];
 				putchar(d);
 			} putchar('\n');
-			printf("Имя: ");
+			printf("РРјСЏ: ");
 			for (l = 0; (student->firstName[l]) != '\0'; l++) {
 				d = student->firstName[l];
 				putchar(d);
 			} putchar('\n');
-			printf("Отчество: ");
+			printf("РћС‚С‡РµСЃС‚РІРѕ: ");
 			for (l = 0; (student->middleName[l]) != '\0'; l++) {
 				d = student->middleName[l];
 				putchar(d);
 			} putchar('\n');
-			printf("Серия паспорта: ");
+			printf("РЎРµСЂРёСЏ РїР°СЃРїРѕСЂС‚Р°: ");
 			int q = student->id.series;
 			printf("%d\n", q);
-			printf("Номер паспорта: ");
+			printf("РќРѕРјРµСЂ РїР°СЃРїРѕСЂС‚Р°: ");
 			q = student->id.number;
 			printf("%d\n", q);
-			printf("Год рождения: ");
+			printf("Р“РѕРґ СЂРѕР¶РґРµРЅРёСЏ: ");
 			q = student->yearofBirth;
 			printf("%d\n", q);
-			printf("Оценка по информатике: ");
+			printf("РћС†РµРЅРєР° РїРѕ РёРЅС„РѕСЂРјР°С‚РёРєРµ: ");
 			q = student->rate;
 			printf("%d\n", q);
 		}
@@ -253,73 +253,73 @@ void out(Array* Lect_Arr, Array* Stud_Arr) {
 void out_concate(Array* new_arr, int lect_count, int stud_count) {
 	int l, i;
 	char d;
-	printf("\nПРЕПОДАВАТЕЛИ\n\n");
+	printf("\nРџР Р•РџРћР”РђР’РђРўР•Р›Р\n\n");
 	for (i = 0; i < lect_count; i++) {
 		Lecturer* lecturer = (Lecturer*)new_arr->memory_ptr[i];
 		printf("\n");
-		printf("Фамилия: ");
+		printf("Р¤Р°РјРёР»РёСЏ: ");
 		for (l = 0; (lecturer->lastName[l]) != '\0'; l++) {
 			d = lecturer->lastName[l];
 			putchar(d);
 		} putchar('\n');
-		printf("Имя: ");
+		printf("РРјСЏ: ");
 		for (l = 0; (lecturer->firstName[l]) != '\0'; l++) {
 			d = lecturer->firstName[l];
 			putchar(d);
 		} putchar('\n');
-		printf("Отчество: ");
+		printf("РћС‚С‡РµСЃС‚РІРѕ: ");
 		for (l = 0; (lecturer->middleName[l]) != '\0'; l++) {
 			d = lecturer->middleName[l];
 			putchar(d);
 		} putchar('\n');
-		printf("Серия паспорта: ");
+		printf("РЎРµСЂРёСЏ РїР°СЃРїРѕСЂС‚Р°: ");
 		int q = lecturer->id.series;
 		printf("%d\n", q);
-		printf("Номер паспорта: ");
+		printf("РќРѕРјРµСЂ РїР°СЃРїРѕСЂС‚Р°: ");
 		q = lecturer->id.number;
 		printf("%d\n", q);
-		printf("Год рождения: ");
+		printf("Р“РѕРґ СЂРѕР¶РґРµРЅРёСЏ: ");
 		q = lecturer->yearofBirth;
 		printf("%d\n", q);
-		printf("Звание: ");
+		printf("Р—РІР°РЅРёРµ: ");
 		q = lecturer->grade;
 		if (q == 0)
-			printf("Ассистент\n");
+			printf("РђСЃСЃРёСЃС‚РµРЅС‚\n");
 		if (q == 1)
-			printf("Доцент\n");
+			printf("Р”РѕС†РµРЅС‚\n");
 		if (q == 2)
-			printf("Профессор\n");
+			printf("РџСЂРѕС„РµСЃСЃРѕСЂ\n");
 	}
 
-	printf("\nСТУДЕНТЫ\n\n");
+	printf("\nРЎРўРЈР”Р•РќРўР«\n\n");
 	while(i < lect_count + stud_count && stud_count != 0) {
 		Student* student = new_arr->memory_ptr[i];
 		printf("\n");
-		printf("Фамилия: ");
+		printf("Р¤Р°РјРёР»РёСЏ: ");
 		for (l = 0; (student->lastName[l]) != '\0'; l++) {
 			d = student->lastName[l];
 			putchar(d);
 		} putchar('\n');
-		printf("Имя: ");
+		printf("РРјСЏ: ");
 		for (l = 0; (student->firstName[l]) != '\0'; l++) {
 			d = student->firstName[l];
 			putchar(d);
 		} putchar('\n');
-		printf("Отчество: ");
+		printf("РћС‚С‡РµСЃС‚РІРѕ: ");
 		for (l = 0; (student->middleName[l]) != '\0'; l++) {
 			d = student->middleName[l];
 			putchar(d);
 		} putchar('\n');
-		printf("Серия паспорта: ");
+		printf("РЎРµСЂРёСЏ РїР°СЃРїРѕСЂС‚Р°: ");
 		int q = student->id.series;
 		printf("%d\n", q);
-		printf("Номер паспорта: ");
+		printf("РќРѕРјРµСЂ РїР°СЃРїРѕСЂС‚Р°: ");
 		q = student->id.number;
 		printf("%d\n", q);
-		printf("Год рождения: ");
+		printf("Р“РѕРґ СЂРѕР¶РґРµРЅРёСЏ: ");
 		q = student->yearofBirth;
 		printf("%d\n", q);
-		printf("Оценка по информатике: ");
+		printf("РћС†РµРЅРєР° РїРѕ РёРЅС„РѕСЂРјР°С‚РёРєРµ: ");
 		q = student->rate;
 		printf("%d\n", q);
 		i++;
@@ -397,7 +397,7 @@ void free_concate(Array* new_arr, int lect_count, int stud_count) {
 	free(arr);
 }
 	
-//Заданные функции
+//Р—Р°РґР°РЅРЅС‹Рµ С„СѓРЅРєС†РёРё
 
 void map(Array* arr, void* function(void*)) {
 	int i;
@@ -435,7 +435,7 @@ void* concat(Array* arr1, Array* arr2) {
 	return(new_arr);
 }
 
-//Функции для заданных
+//Р¤СѓРЅРєС†РёРё РґР»СЏ Р·Р°РґР°РЅРЅС‹С…
 void* grade_change(Lecturer* struct_ptr) {
 	struct_ptr->grade = 2;
 	return (struct_ptr);

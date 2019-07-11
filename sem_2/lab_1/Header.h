@@ -1,10 +1,10 @@
 #ifndef _HEADER__H__
 #define _HEADER__H__
 
-//Структуры
-typedef struct array_t {  //определяем тип данных динамический массив    
-	int elements_count;   //число элементов массива
-	void **memory_ptr;    //динамический массив из указателей
+//РЎС‚СЂСѓРєС‚СѓСЂС‹
+typedef struct array_t {  //РѕРїСЂРµРґРµР»СЏРµРј С‚РёРї РґР°РЅРЅС‹С… РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ    
+	int elements_count;   //С‡РёСЃР»Рѕ СЌР»РµРјРµРЅС‚РѕРІ РјР°СЃСЃРёРІР°
+	void **memory_ptr;    //РґРёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ РёР· СѓРєР°Р·Р°С‚РµР»РµР№
 } Array;
 
 typedef struct person_id {
@@ -30,7 +30,7 @@ typedef struct lecturers_t {
 	int yearofBirth;
 } Lecturer;
 
-//Основные функции
+//РћСЃРЅРѕРІРЅС‹Рµ С„СѓРЅРєС†РёРё
 void* array_alloc();
 
 void* array_set(Array*, int);
@@ -53,24 +53,24 @@ void out(Array*, Array*);
 
 void out_concate(Array*, int, int);
 
-//Заданные функции
+//Р—Р°РґР°РЅРЅС‹Рµ С„СѓРЅРєС†РёРё
 void map(Array*, void* function(void*));
 
 void where(Array*, int function(void*));
 
 void* concat(Array*, Array*);
 
-//Функции для map
+//Р¤СѓРЅРєС†РёРё РґР»СЏ map
 void* grade_change(Lecturer*);
 
 void* No_Birthday_Stud(Student*);
 
-// Функции для where
+// Р¤СѓРЅРєС†РёРё РґР»СЏ where
 int age_sort_stud(Student*);
 
 int grade_sort(Lecturer*);
 
-//Тестовые функции
+//РўРµСЃС‚РѕРІС‹Рµ С„СѓРЅРєС†РёРё
 void Testing();
 
 int test_concate(Array*, Array*);
